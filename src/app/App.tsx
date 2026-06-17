@@ -1,5 +1,5 @@
 import { Outlet } from "react-router";
-import NavigationMenu from "./components/navigation-menu";
+import NavigationMenu from "./components/ui/navigation-menu";
 import Footer from "../components/Footer";
 
 export default function App() {
