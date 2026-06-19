@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from "react";
 import {
   ArrowRight,
@@ -16,18 +17,155 @@ import {
   Target,
 } from "lucide-react";
 
+const STATS = [
+  { value: "15+", label: "Years Experience", icon: Briefcase },
+  { value: "50+", label: "Projects Delivered", icon: Target },
+  { value: "6+", label: "Years Leadership", icon: CheckCircle },
+  { value: "100+", label: "Stakeholders Managed", icon: MessageSquare },
+];
+
+const COMPETENCIES = [
+  { icon: Briefcase, title: "Project Management", desc: "Complex digital projects" },
+  { icon: FileText, title: "Content Strategy", desc: "Governance and workflows" },
+  { icon: Layout, title: "UX Leadership", desc: "Research and optimization" },
+  { icon: Target, title: "Digital Strategy", desc: "Roadmaps and KPIs" },
+  { icon: CheckCircle, title: "Team Leadership", desc: "Cross-functional teams" },
+];
+
+const PROJECTS = [
+  {
+    id: 1,
+    image: "https://placehold.co/600x400",
+    title: "Healthcare Portal",
+    role: "Project Manager",
+    tags: ["Healthcare", "UX", "CMS"],
+    challenge: "Legacy platform modernization.",
+    actions: "Managed redesign and development process.",
+    results: "Improved usability and content management.",
+  },
+  {
+    id: 2,
+    image: "https://placehold.co/600x400",
+    title: "Government Website",
+    role: "Digital Lead",
+    tags: ["Government", "Accessibility"],
+    challenge: "Large-scale information architecture.",
+    actions: "Led content and UX transformation.",
+    results: "Improved citizen access to services.",
+  },
+  {
+    id: 3,
+    image: "https://placehold.co/600x400",
+    title: "Corporate Platform",
+    role: "Project Manager",
+    tags: ["Enterprise", "Strategy"],
+    challenge: "Fragmented digital ecosystem.",
+    actions: "Unified workflows and governance.",
+    results: "More efficient content operations.",
+  },
+];
+
+const EXPERIENCE = [
+  {
+    period: "2020 – Present",
+    title: "Head of Digital Projects",
+    company: "Healthcare Organization",
+    isCurrent: true,
+    responsibilities: [
+      "Lead digital initiatives",
+      "Manage cross-functional teams",
+    ],
+    achievements: [
+      "Delivered major platform redesign",
+      "Improved operational efficiency",
+    ],
+    skills: ["Leadership", "Strategy", "Project Management"],
+  },
+];
+
+const TOOLS = [
+  { name: "Figma", category: "Design" },
+  { name: "Bitrix", category: "CMS" },
+  { name: "WordPress", category: "CMS" },
+  { name: "Jira", category: "Management" },
+  { name: "Git", category: "Development" },
+];
+
+const CATEGORY_COLORS: Record<string, string> = {
+  Design: "#0EA5A4",
+  CMS: "#2563EB",
+  Management: "#F59E0B",
+  Development: "#8B5CF6",
+};
+
+const PROCESS_STEPS = [
+  {
+    step: "1",
+    title: "Discovery",
+    desc: "Understand goals and requirements.",
+    icon: Target,
+  },
+  {
+    step: "2",
+    title: "Planning",
+    desc: "Build roadmap and priorities.",
+    icon: Briefcase,
+  },
+  {
+    step: "3",
+    title: "Execution",
+    desc: "Coordinate delivery teams.",
+    icon: CheckCircle,
+  },
+  {
+    step: "4",
+    title: "Optimization",
+    desc: "Measure and improve results.",
+    icon: Layout,
+  },
+  {
+    step: "5",
+    title: "Growth",
+    desc: "Scale successful solutions.",
+    icon: ArrowRight,
+  },
+];
+
+const TESTIMONIALS = [
+  {
+    text: "Excellent project leader with strong business understanding.",
+    name: "Anna Petrova",
+    role: "Product Owner",
+    initial: "A",
+  },
+  {
+    text: "Brings structure to complex initiatives.",
+    name: "Ivan Smirnov",
+    role: "Development Manager",
+    initial: "I",
+  },
+  {
+    text: "Consistently delivers results.",
+    name: "Maria Volkova",
+    role: "Marketing Director",
+    initial: "M",
+  },
+];
+
 function SectionLabel({
   children,
   centered = false,
+  className = "",
 }: {
   children: React.ReactNode;
   centered?: boolean;
+  className?: string;
 }) {
   return (
     <div
       className={`text-sm font-semibold uppercase tracking-wider text-[#0EA5A4] mb-3 ${
         centered ? "text-center" : ""
-      }`}
+      } ${className}`}
     >
       {children}
     </div>
@@ -37,21 +175,22 @@ function SectionLabel({
 function SectionHeading({
   children,
   centered = false,
+  className = "",
 }: {
   children: React.ReactNode;
   centered?: boolean;
+  className?: string;
 }) {
   return (
     <h2
       className={`text-3xl md:text-4xl font-extrabold text-[#1F2937] mb-8 ${
         centered ? "text-center" : ""
-      }`}
+      } ${className}`}
     >
       {children}
     </h2>
   );
 }
-
 // ─── Hero ─────────────────────────────────────────────────────────────────────
 
 function Hero() {
