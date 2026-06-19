@@ -1,4 +1,39 @@
 import { useState } from "react";
+function SectionLabel({
+  children,
+  centered = false,
+}: {
+  children: React.ReactNode;
+  centered?: boolean;
+}) {
+  return (
+    <div
+      className={`text-sm font-semibold uppercase tracking-wider text-[#0EA5A4] mb-3 ${
+        centered ? "text-center" : ""
+      }`}
+    >
+      {children}
+    </div>
+  );
+}
+
+function SectionHeading({
+  children,
+  centered = false,
+}: {
+  children: React.ReactNode;
+  centered?: boolean;
+}) {
+  return (
+    <h2
+      className={`text-3xl md:text-4xl font-extrabold text-[#1F2937] mb-8 ${
+        centered ? "text-center" : ""
+      }`}
+    >
+      {children}
+    </h2>
+  );
+}
 
 // ─── Hero ─────────────────────────────────────────────────────────────────────
 
