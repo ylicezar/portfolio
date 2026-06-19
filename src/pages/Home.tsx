@@ -1,4 +1,21 @@
 import { useState } from "react";
+import {
+  ArrowRight,
+  Briefcase,
+  CheckCircle,
+  ChevronDown,
+  ChevronUp,
+  Download,
+  FileText,
+  Layout,
+  Linkedin,
+  Mail,
+  MessageSquare,
+  Quote,
+  Send,
+  Target,
+} from "lucide-react";
+
 function SectionLabel({
   children,
   centered = false,
