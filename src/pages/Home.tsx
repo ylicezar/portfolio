@@ -670,3 +670,22 @@ function Contact() {
     </section>
   );
 }
+function Home() {
+  return (
+    <>
+      <Hero />
+      <Stats />
+      <About />
+      <Competencies />
+      <Projects />
+      <Experience />
+      <Tools />
+      <Process />
+      <Testimonials />
+      <Resume />
+      <Contact />
+    </>
+  );
+}
+
+export default Home;
