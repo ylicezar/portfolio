@@ -202,10 +202,10 @@ function Hero() {
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 mb-5">
               <span className="inline-block w-2 h-2 rounded-full bg-[#0EA5A4] animate-pulse" />
-              <span className="text-sm font-medium text-[#0EA5A4]">Available for new opportunities</span>
+              <span className="text-sm font-medium text-[#0EA5A4]">Управляю веб-проектами от идеи до работающего результата</span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#1F2937] leading-[1.05] tracking-tight mb-5">
-              Yulia<br />Perevoshchikova
+              Юлия<br />Перевощикова
             </h1>
             <div className="flex flex-wrap gap-2 mb-6">
               {["Web Project Manager", "Digital Project Lead", "Content Operations Manager"].map((t) => (
@@ -218,48 +218,56 @@ function Hero() {
               ))}
             </div>
             <p className="text-lg sm:text-xl font-bold text-[#1F2937] leading-snug mb-3">
-              15+ years managing web projects, content systems, UX improvements, and cross-functional teams.
+             15 лет в digital: руководство командами, контент-стратегия, UX/UI и техническая экспертиза — чтобы ваш продукт приносил пользу и достигал целей.
             </p>
-            <p className="text-sm sm:text-base text-[#6B7280] leading-relaxed mb-8">
+            {/* <p className="text-sm sm:text-base text-[#6B7280] leading-relaxed mb-8">
               I bridge business goals, content strategy, design, and development to deliver effective digital products that create measurable, lasting value.
-            </p>
+            </p>*/}
             <div className="flex flex-wrap gap-3">
               <a
                 href="#projects"
                 className="inline-flex items-center gap-2 bg-[#0EA5A4] text-white font-semibold px-5 sm:px-6 py-3 rounded-xl hover:bg-[#0d9190] transition-colors text-sm"
               >
-                View Projects <ArrowRight size={15} />
+                Смотреть кейсы <ArrowRight size={15} />
               </a>
               <a
                 href="#resume"
                 className="inline-flex items-center gap-2 bg-white border border-[#E5E7EB] text-[#1F2937] font-semibold px-5 sm:px-6 py-3 rounded-xl hover:border-[#0EA5A4] hover:text-[#0EA5A4] transition-colors text-sm"
               >
-                Download Resume <Download size={15} />
+                Скачать резюме <Download size={15} />
               </a>
             </div>
           </div>
 
           {/* Portrait — desktop only */}
-          <div className="hidden md:flex justify-end">
-            <div className="relative">
-              <div className="w-64 lg:w-72 h-80 lg:h-[22rem] rounded-3xl bg-gradient-to-br from-[#E0F2F2] to-[#DBEAFE] flex flex-col items-center justify-center gap-3 border border-[#E5E7EB]">
-                <div className="w-24 h-24 rounded-full bg-[#0EA5A4]/15 border-2 border-[#0EA5A4]/25 flex items-center justify-center">
-                  <span className="text-4xl font-black text-[#0EA5A4]">YP</span>
-                </div>
-                <p className="text-sm font-medium text-[#6B7280] mt-2">Professional Portrait</p>
-              </div>
-              <div className="absolute -bottom-5 -left-8 bg-white rounded-2xl shadow-md px-4 py-3 border border-[#E5E7EB]">
-                <div className="text-xs text-[#6B7280] font-medium mb-0.5">Projects delivered</div>
-                <div className="text-2xl font-extrabold text-[#1F2937]">50+</div>
-              </div>
-              <div className="absolute -top-5 -right-8 bg-white rounded-2xl shadow-md px-4 py-3 border border-[#E5E7EB]">
-                <div className="text-xs text-[#6B7280] font-medium mb-0.5">Years experience</div>
-                <div className="text-2xl font-extrabold text-[#0EA5A4]">15+</div>
-              </div>
-              <div className="absolute -top-6 -left-6 w-20 h-20 rounded-2xl bg-[#2563EB]/5 border border-[#2563EB]/10 -z-10" />
-              <div className="absolute -bottom-6 -right-6 w-14 h-14 rounded-xl bg-[#0EA5A4]/8 -z-10" />
-            </div>
-          </div>
+<div className="hidden md:flex justify-end">
+  <div className="relative">
+    {/* Сам портрет — фото на всю карточку */}
+    <div className="w-64 lg:w-72 h-80 lg:h-[22rem] rounded-3xl overflow-hidden border border-[#E5E7EB]">
+      <img
+        src="/Perevoshchikova.webp"
+        alt="Юлия Перевощикова"
+        className="w-full h-full object-cover"
+      />
+    </div>
+
+    {/* Плашка «Projects delivered» */}
+    <div className="absolute -bottom-5 -left-8 bg-white rounded-2xl shadow-md px-4 py-3 border border-[#E5E7EB]">
+      <div className="text-xs text-[#6B7280] font-medium mb-0.5">Законченных проектов</div>
+      <div className="text-2xl font-extrabold text-[#1F2937]">50+</div>
+    </div>
+
+    {/* Плашка «Years experience» */}
+    <div className="absolute -top-5 -right-8 bg-white rounded-2xl shadow-md px-4 py-3 border border-[#E5E7EB]">
+      <div className="text-xs text-[#6B7280] font-medium mb-0.5">Лет опыта</div>
+      <div className="text-2xl font-extrabold text-[#0EA5A4]">15+</div>
+    </div>
+
+    {/* Декоративные квадратики */}
+    <div className="absolute -top-6 -left-6 w-20 h-20 rounded-2xl bg-[#2563EB]/5 border border-[#2563EB]/10 -z-10" />
+    <div className="absolute -bottom-6 -right-6 w-14 h-14 rounded-xl bg-[#0EA5A4]/8 -z-10" />
+  </div>
+</div>
 
           {/* Mobile-only mini stat row */}
           <div className="flex md:hidden gap-4">
