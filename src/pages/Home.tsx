@@ -890,7 +890,7 @@ function Home() {
       <Hero />
       <Stats />
       <About />
-      <Competencies />
+     /* <Competencies /> */
       <Projects />
       <Experience />
       <Tools />
