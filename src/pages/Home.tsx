@@ -67,35 +67,47 @@ const PROJECTS = [
 
 const EXPERIENCE = [
   {
-    period: "2020 – Present",
-    title: "Head of Digital Projects",
-    company: "Healthcare Organization",
+    period: "Сентябрь 2019 — сейчас",
+    title: "Руководитель отдела контента и веб-разработки",
+    company: "Медафарм",
     isCurrent: true,
-    responsibilities: [
-      "Lead digital initiatives",
-      "Manage cross-functional teams",
+    Обязанности: [
+      "Управляю командой из 4 человек (контент-менеджеры, дизайнер, frontend-разработчик) и внешними подрядчиками",
+      "Готовлю технические задания для разработчиков, дизайнеров и копирайтеров. Фиксирую чёткие критерии приёмки.",
+      "Составляю контент-план для обновления новостных лент и оптимизации сайтов",
+      "Ежемесячно свожу отчёты по трафику и конверсиям из Яндекс.Метрики и GA4, презентую результаты руководству и предлагаю корректировки стратегии",
+      "Контролирую работу хостинга, его своевременную оплату, продление более 50 доменов и регулярное обновление SSL сертификатов",
     ],
-    achievements: [
-      "Delivered major platform redesign",
-      "Improved operational efficiency",
+    Достижения: [
+      "За время моей работы руководителем отдела: создан с нуля 21 сайт, перенесено на другие CMS 17 сайтов, проведено 26 редизайнов",
+      "Настроила процесс фактчекинга с привлечением практикующих врачей: материалы проверяются в два этапа",
+      "За последние три года обучила четырех сотрудников работе с CMS, стандартам форматирования текстов, основам HTML и CMS",
     ],
-    skills: ["Leadership", "Strategy", "Project Management"],
+    skills: ["Лидерство", "Стратегия", "Управление проектами"],
   },
 ];
 
 const TOOLS = [
-  { name: "Figma", category: "Design" },
-  { name: "Bitrix", category: "CMS" },
+  { name: "Figma", category: "Дизайн" },
+  { name: "Potoshope", category: "Дизайн" },
+  { name: "Illustrator", category: "Дизайн" },
+  { name: "Drupal", category: "CMS" },
+  { name: "Tilda", category: "CMS" },
+  { name: "Битрикс", category: "CMS" },
   { name: "WordPress", category: "CMS" },
-  { name: "Jira", category: "Management" },
-  { name: "Git", category: "Development" },
+  { name: "Мегаплан", category: "Управление" },
+  { name: "Битрикс24", category: "Управление" },
+  { name: "HTML", category: "Разработка" },
+  { name: "CSS", category: "Разработка" },
+  { name: "Яндекс.Метрика", category: "Маркетинг" },
 ];
 
 const CATEGORY_COLORS: Record<string, string> = {
-  Design: "#0EA5A4",
+  Дизайн: "#0EA5A4",
   CMS: "#2563EB",
-  Management: "#F59E0B",
-  Development: "#8B5CF6",
+  Управление: "#F59E0B",
+  Разработка: "#8B5CF6",
+  Маркетинг: "#0EA5A4",
 };
 
 const PROCESS_STEPS = [
@@ -218,7 +230,7 @@ function Hero() {
               ))}
             </div>
             <p className="text-lg sm:text-xl font-bold text-[#1F2937] leading-snug mb-3">
-             15 лет в digital: руководство командами, контент-стратегия, UX/UI и техническая экспертиза — чтобы ваш продукт приносил пользу и достигал целей.
+             15 лет в digital: руководство командами, контент-стратегия, UX/UI и техническая экспертиза – чтобы ваш продукт приносил пользу и достигал целей.
             </p>
             {/* <p className="text-sm sm:text-base text-[#6B7280] leading-relaxed mb-8">
               I bridge business goals, content strategy, design, and development to deliver effective digital products that create measurable, lasting value.
@@ -259,7 +271,7 @@ function Hero() {
 
     {/* Плашка «Years experience» */}
     <div className="absolute -top-5 -right-8 bg-white rounded-2xl shadow-md px-4 py-3 border border-[#E5E7EB]">
-      <div className="text-xs text-[#6B7280] font-medium mb-0.5">Лет опыта</div>
+      <div className="text-xs text-[#6B7280] font-medium mb-0.5">Лет опыта в web</div>
       <div className="text-2xl font-extrabold text-[#0EA5A4]">15+</div>
     </div>
 
@@ -273,15 +285,15 @@ function Hero() {
           <div className="flex md:hidden gap-4">
             <div className="flex-1 bg-white rounded-2xl border border-[#E5E7EB] px-4 py-3 text-center">
               <div className="text-2xl font-extrabold text-[#0EA5A4]">50+</div>
-              <div className="text-xs text-[#6B7280] font-medium mt-0.5">Projects</div>
+              <div className="text-xs text-[#6B7280] font-medium mt-0.5">Проектов</div>
             </div>
             <div className="flex-1 bg-white rounded-2xl border border-[#E5E7EB] px-4 py-3 text-center">
               <div className="text-2xl font-extrabold text-[#1F2937]">15+</div>
-              <div className="text-xs text-[#6B7280] font-medium mt-0.5">Yrs Experience</div>
+              <div className="text-xs text-[#6B7280] font-medium mt-0.5">Лет опыта в web</div>
             </div>
             <div className="flex-1 bg-white rounded-2xl border border-[#E5E7EB] px-4 py-3 text-center">
               <div className="text-2xl font-extrabold text-[#1F2937]">6+</div>
-              <div className="text-xs text-[#6B7280] font-medium mt-0.5">Yrs Leadership</div>
+              <div className="text-xs text-[#6B7280] font-medium mt-0.5">Лет управления командой</div>
             </div>
           </div>
         </div>
@@ -325,31 +337,32 @@ function About() {
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-2 gap-10 md:gap-14 lg:gap-16 items-start">
           <div>
-            <SectionLabel>About Me</SectionLabel>
+            <SectionLabel>Обо мне</SectionLabel>
             <SectionHeading className="mb-5 sm:mb-6">
-              Where strategy<br />meets execution
+              От добавления контента<br />до управления проектами
             </SectionHeading>
             <div className="space-y-4 text-[#6B7280] leading-relaxed text-sm sm:text-base">
               <p>
-                I started my career as a content manager, learning how digital content actually reaches and resonates with audiences. That ground-level experience shaped everything I do as a project manager today — I understand what happens at every stage of a digital product's lifecycle.
+                Более 15 лет работаю в web‑сфере: начинала как контент‑менеджер, выросла до руководителя отдела. За это время прошла весь цикл создания сайтов — от идеи и технического задания до запуска и анализа результатов.
               </p>
               <p>
-                Over 15 years, I grew through web design, UX, and development leadership roles, eventually heading departments responsible for delivering enterprise-scale digital platforms for healthcare, government, and commercial organizations.
+                Журналистское образование и опыт научили меня важности фактчекинга. Каждая цифра, факт или формулировка проходят проверку – привычка перепроверять источники и не полагаться на допущения помогает выпускать достоверный контент и принимать взвешенные решения. Умею вычленять суть, «переводить» сложную медицинскую информацию на понятный язык.
+              </p>
+             <p> Не боюсь отстаивать свою точку зрения и аргументированно защищать решения, если вижу, что они работают на качество продукта.</p>
+              <p>
+               Команда со мной не тратит время на догадки: технические задания пишу подробно, с учётом ограничений CMS и вёрстки. Люблю, когда всё разложено по полочкам, но без лишней бюрократии.
               </p>
               <p>
-                What sets me apart is my ability to speak both languages: business strategy and technical execution. I translate stakeholder requirements into precise development tasks, and I translate engineering constraints back to executives in terms of impact and timeline.
-              </p>
-              <p>
-                Today I work at the intersection of content operations, digital strategy, and project delivery — helping organizations build digital products that are not just functional, but genuinely effective.
+               Ищу компанию, где нужен человек, способный и стратегию продумать, и, если потребуется, засучить рукава.
               </p>
             </div>
           </div>
           <div className="space-y-3 sm:space-y-4">
             {[
-              { label: "Project Management", icon: Briefcase, desc: "PMP-aligned methodologies, Agile/Scrum, cross-team coordination across complex deliveries" },
-              { label: "Content Strategy", icon: FileText, desc: "Information architecture, content governance, editorial workflows and taxonomy design" },
-              { label: "UX Leadership", icon: Layout, desc: "User research oversight, prototype review, conversion optimization and usability testing" },
-              { label: "Digital Strategy", icon: Target, desc: "Transformation roadmapping, KPI frameworks, stakeholder alignment and business-case writing" },
+              { label: "Управление проектами", icon: Briefcase, desc: "Полный цикл веб-проектов, координация распределённых команд и внешних подрядчиков, постановка задач, внедрение чек-листов и контроль сроков" },
+              { label: "Контент-стратегия", icon: FileText, desc: "Разработка стратегий под бизнес-цели, построение редакционных процессов и фактчекинга, создание рубрикаторов и контент-планов" },
+              { label: "UX/UI", icon: Layout, desc: "Проектирование интерфейсов и прототипирование в Figma, проведение редизайнов с фокусом на конверсию, анализ пользовательского поведения и юзабилити-тестирование" },
+              { label: "Стратегия", icon: Target, desc: "Разработка дорожных карт развития сайтов, формирование KPI-систем и отчётности на основе данных Яндекс.Метрики и Google Analytics, защита решений перед стейкхолдерами" },
             ].map(({ label, icon: Icon, desc }) => (
               <div
                 key={label}
@@ -373,13 +386,14 @@ function About() {
 
 // ─── Competencies ─────────────────────────────────────────────────────────────
 
+/*
 function Competencies() {
   return (
     <section className="py-16 sm:py-20 md:py-24 bg-white">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         <div className="text-center mb-10 sm:mb-14">
-          <SectionLabel centered>Core Competencies</SectionLabel>
-          <SectionHeading>Areas of expertise</SectionHeading>
+          <SectionLabel centered>Основные компетенции</SectionLabel>
+          <SectionHeading>Области экспертизы</SectionHeading>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
           {COMPETENCIES.map(({ icon: Icon, title, desc }) => (
@@ -399,7 +413,7 @@ function Competencies() {
     </section>
   );
 }
-
+*/
 // ─── Projects ─────────────────────────────────────────────────────────────────
 
 function ProjectCard({ project }: { project: typeof PROJECTS[0] }) {
@@ -462,11 +476,11 @@ function Projects() {
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 sm:gap-6 mb-10 sm:mb-14">
           <div>
-            <SectionLabel>Featured Projects</SectionLabel>
-            <SectionHeading>Selected case studies</SectionHeading>
+            <SectionLabel>Рекомендуемые проекты</SectionLabel>
+            <SectionHeading>Примеры успешных проектов</SectionHeading>
           </div>
           <p className="text-sm text-[#6B7280] max-w-xs leading-relaxed">
-            A selection of complex projects delivered across healthcare, government, and enterprise sectors.
+            Подборка проектов, реализованных в сфере здравоохранения и медицинского оборудования.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -489,10 +503,10 @@ function Experience() {
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-3 gap-10 md:gap-14 lg:gap-16 items-start">
           <div>
-            <SectionLabel>Work Experience</SectionLabel>
-            <SectionHeading>15 years of progressive responsibility</SectionHeading>
+            <SectionLabel>Опыт работы</SectionLabel>
+            <SectionHeading>15 лет последовательного профессионального роста</SectionHeading>
             <p className="mt-4 sm:mt-5 text-sm text-[#6B7280] leading-relaxed">
-              From content management to department leadership — a career built on continuous growth and expanding scope of impact.
+              От контент-менеджера до руководителя отдела – путь, построенный на расширении ответственности и освоении новых направлений.
             </p>
           </div>
 
