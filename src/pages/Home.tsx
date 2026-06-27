@@ -24,13 +24,15 @@ const STATS = [
   { value: "100+", label: "Stakeholders Managed", icon: MessageSquare },
 ];
 
-const COMPETENCIES = [
+<?php 
+/* const COMPETENCIES = [
   { icon: Briefcase, title: "Project Management", desc: "Complex digital projects" },
   { icon: FileText, title: "Content Strategy", desc: "Governance and workflows" },
   { icon: Layout, title: "UX Leadership", desc: "Research and optimization" },
   { icon: Target, title: "Digital Strategy", desc: "Roadmaps and KPIs" },
   { icon: CheckCircle, title: "Team Leadership", desc: "Cross-functional teams" },
 ];
+*/ ?>
 
 const PROJECTS = [
   {
