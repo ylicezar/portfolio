@@ -24,16 +24,6 @@ const STATS = [
   { value: "100+", label: "Stakeholders Managed", icon: MessageSquare },
 ];
 
-<?php 
-/* const COMPETENCIES = [
-  { icon: Briefcase, title: "Project Management", desc: "Complex digital projects" },
-  { icon: FileText, title: "Content Strategy", desc: "Governance and workflows" },
-  { icon: Layout, title: "UX Leadership", desc: "Research and optimization" },
-  { icon: Target, title: "Digital Strategy", desc: "Roadmaps and KPIs" },
-  { icon: CheckCircle, title: "Team Leadership", desc: "Cross-functional teams" },
-];
-*/ ?>
-
 const PROJECTS = [
   {
     id: 1,
@@ -386,36 +376,6 @@ function About() {
   );
 }
 
-// ─── Competencies ─────────────────────────────────────────────────────────────
-
-/*
-function Competencies() {
-  return (
-    <section className="py-16 sm:py-20 md:py-24 bg-white">
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
-        <div className="text-center mb-10 sm:mb-14">
-          <SectionLabel centered>Основные компетенции</SectionLabel>
-          <SectionHeading>Области экспертизы</SectionHeading>
-        </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
-          {COMPETENCIES.map(({ icon: Icon, title, desc }) => (
-            <div
-              key={title}
-              className="group bg-[#F7F8FA] rounded-xl sm:rounded-2xl p-4 sm:p-5 border border-[#E5E7EB] hover:bg-white hover:border-[#0EA5A4]/40 hover:shadow-md transition-all cursor-default"
-            >
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-white border border-[#E5E7EB] group-hover:bg-[#E0F2F2] group-hover:border-[#0EA5A4]/30 flex items-center justify-center mb-3 transition-all">
-                <Icon size={16} className="text-[#6B7280] group-hover:text-[#0EA5A4] transition-colors" />
-              </div>
-              <div className="font-bold text-[#1F2937] text-sm mb-1 leading-snug">{title}</div>
-              <div className="text-xs text-[#6B7280] leading-relaxed hidden sm:block">{desc}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-*/
 // ─── Projects ─────────────────────────────────────────────────────────────────
 
 function ProjectCard({ project }: { project: typeof PROJECTS[0] }) {
