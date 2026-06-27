@@ -518,7 +518,7 @@ function Experience() {
                           <div>
                             <div className="text-xs font-semibold uppercase tracking-wider text-[#6B7280] mb-2">Responsibilities</div>
                             <ul className="space-y-1.5">
-                              {exp.responsibilities.map((r, i) => (
+                              {exp.Обязанности.map((r, i) => (
                                 <li key={i} className="flex items-start gap-2 text-sm text-[#6B7280]">
                                   <span className="mt-[7px] w-1 h-1 rounded-full bg-[#9CA3AF] flex-shrink-0" />
                                   {r}
@@ -529,7 +529,7 @@ function Experience() {
                           <div>
                             <div className="text-xs font-semibold uppercase tracking-wider text-[#0EA5A4] mb-2">Key Achievements</div>
                             <ul className="space-y-1.5">
-                              {exp.achievements.map((a, i) => (
+                              {exp.Достижения.map((a, i) => (
                                 <li key={i} className="flex items-start gap-2 text-sm text-[#1F2937] font-medium">
                                   <CheckCircle size={13} className="text-[#0EA5A4] mt-0.5 flex-shrink-0" />
                                   {a}
