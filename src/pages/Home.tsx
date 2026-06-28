@@ -18,10 +18,10 @@ import {
 } from "lucide-react";
 
 const STATS = [
-  { value: "15+", label: "Years Experience", icon: Briefcase },
-  { value: "50+", label: "Projects Delivered", icon: Target },
-  { value: "6+", label: "Years Leadership", icon: CheckCircle },
-  { value: "100+", label: "Stakeholders Managed", icon: MessageSquare },
+  { value: "15+", label: "Опыт работы", icon: Briefcase },
+  { value: "50+", label: "Завершённых проектов", icon: Target },
+  { value: "6+", label: "Опыта управления", icon: CheckCircle },
+  { value: "50+", label: "Доменов под контролем", icon: MessageSquare },
 ];
 
 const PROJECTS = [
@@ -105,32 +105,32 @@ const CATEGORY_COLORS: Record<string, string> = {
 const PROCESS_STEPS = [
   {
     step: "1",
-    title: "Discovery",
-    desc: "Understand goals and requirements.",
+    title: "Исследование",
+    desc: "Понимание целей и требований.",
     icon: Target,
   },
   {
     step: "2",
-    title: "Planning",
-    desc: "Build roadmap and priorities.",
+    title: "Планирование",
+    desc: "Разработка плана действий и определение приоритетов.",
     icon: Briefcase,
   },
   {
     step: "3",
-    title: "Execution",
-    desc: "Coordinate delivery teams.",
+    title: "Реализация",
+    desc: "Координация проектных команд на всех этапах выполнения задач.",
     icon: CheckCircle,
   },
   {
     step: "4",
-    title: "Optimization",
-    desc: "Measure and improve results.",
+    title: "Оптимизация",
+    desc: "Измерение и улучшение результатов.",
     icon: Layout,
   },
   {
     step: "5",
-    title: "Growth",
-    desc: "Scale successful solutions.",
+    title: "Развитие",
+    desc: "Тиражирование удачных механик.",
     icon: ArrowRight,
   },
 ];
@@ -255,15 +255,15 @@ function Hero() {
       />
     </div>
 
-    {/* Плашка «Projects delivered» */}
+    {/* Плашка «Завершённых проектов» */}
     <div className="absolute -bottom-5 -left-8 bg-white rounded-2xl shadow-md px-4 py-3 border border-[#E5E7EB]">
-      <div className="text-xs text-[#6B7280] font-medium mb-0.5">Законченных проектов</div>
+      <div className="text-xs text-[#6B7280] font-medium mb-0.5">Законченных<br> проектов</div>
       <div className="text-2xl font-extrabold text-[#1F2937]">50+</div>
     </div>
 
-    {/* Плашка «Years experience» */}
+    {/* Плашка «Опыт работы» */}
     <div className="absolute -top-5 -right-8 bg-white rounded-2xl shadow-md px-4 py-3 border border-[#E5E7EB]">
-      <div className="text-xs text-[#6B7280] font-medium mb-0.5">Лет опыта в web</div>
+      <div className="text-xs text-[#6B7280] font-medium mb-0.5">Лет опыта<br> в web</div>
       <div className="text-2xl font-extrabold text-[#0EA5A4]">15+</div>
     </div>
 
@@ -343,9 +343,6 @@ function About() {
              <p> Не боюсь отстаивать свою точку зрения и аргументированно защищать решения, если вижу, что они работают на качество продукта.</p>
               <p>
                Команда со мной не тратит время на догадки: технические задания пишу подробно, с учётом ограничений CMS и вёрстки. Люблю, когда всё разложено по полочкам, но без лишней бюрократии.
-              </p>
-              <p>
-               Ищу компанию, где нужен человек, способный и стратегию продумать, и, если потребуется, засучить рукава.
               </p>
             </div>
           </div>
@@ -567,8 +564,8 @@ function Tools() {
     <section id="tools" className="py-16 sm:py-20 md:py-24 bg-[#F7F8FA]">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         <div className="text-center mb-10 sm:mb-14">
-          <SectionLabel centered>Tools & Technologies</SectionLabel>
-          <SectionHeading>The professional toolkit</SectionHeading>
+          <SectionLabel centered>Инструменты и технологии</SectionLabel>
+          <SectionHeading>Профессиональный набор инструментов</SectionHeading>
         </div>
         <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-10">
           {TOOLS.map(({ name, category }) => (
@@ -608,8 +605,8 @@ function Process() {
     <section className="py-16 sm:py-20 md:py-24 bg-white">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 sm:mb-16">
-          <SectionLabel centered>Working Approach</SectionLabel>
-          <SectionHeading>How I manage projects</SectionHeading>
+          <SectionLabel centered>Подход к работе</SectionLabel>
+          <SectionHeading>Как я управляю проектами</SectionHeading>
         </div>
         <div className="relative">
           {/* Connector line — only when all 5 fit in one row */}
@@ -684,10 +681,10 @@ function Resume() {
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         <div className="bg-white rounded-2xl sm:rounded-3xl border border-[#E5E7EB] p-7 sm:p-10 md:p-14 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-10">
           <div className="max-w-lg w-full md:w-auto">
-            <SectionLabel>Resume</SectionLabel>
-            <SectionHeading className="mb-3 sm:mb-4">Download my CV</SectionHeading>
+            <SectionLabel>Резюме</SectionLabel>
+            <SectionHeading className="mb-3 sm:mb-4">Скачать резюме</SectionHeading>
             <p className="text-[#6B7280] text-sm sm:text-base leading-relaxed">
-              A full overview of my professional experience, skills, certifications, and project portfolio — available in PDF format, ready to share with your team.
+              Моё резюме в формате PDF. <br>Полный обзор моего профессионального опыта и навыков.
             </p>
           </div>
           <div className="flex flex-col items-center gap-4 sm:gap-5 flex-shrink-0">
@@ -713,7 +710,7 @@ function Resume() {
               </div>
             </div>
             <button className="inline-flex items-center gap-2 bg-[#0EA5A4] text-white font-semibold px-6 sm:px-7 py-3 rounded-xl hover:bg-[#0d9190] transition-colors text-sm shadow-sm">
-              <Download size={15} /> Download CV (.PDF)
+              <Download size={15} /> Скачать (.PDF)
             </button>
           </div>
         </div>
@@ -738,47 +735,37 @@ function Contact() {
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-start">
           <div>
-            <SectionLabel>Contact</SectionLabel>
+            <SectionLabel>Контакты</SectionLabel>
             <SectionHeading className="mb-3 sm:mb-4">
-              Let's discuss<br />your project
+              Давайте обсудим<br />ваш проект
             </SectionHeading>
             <p className="text-[#6B7280] text-sm sm:text-base leading-relaxed mb-8 sm:mb-10">
-              Whether you're looking for a project manager, digital lead, or content operations expert — I'm available for new opportunities and collaborations.
+              Если вам нужен менеджер web-проекта, руководитель цифрового направления или эксперт по контент-менеджменту – я открыта для новых возможностей и сотрудничества.
             </p>
             <div className="space-y-4 sm:space-y-5">
-              <a href="mailto:y.perevoshchikova@email.com" className="flex items-center gap-3 sm:gap-4 group">
+              <a href="mailto:79260655851@ya.ru" className="flex items-center gap-3 sm:gap-4 group">
                 <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#E0F2F2] flex items-center justify-center group-hover:bg-[#0EA5A4] transition-colors flex-shrink-0">
                   <Mail size={17} className="text-[#0EA5A4] group-hover:text-white transition-colors" />
                 </div>
                 <div>
                   <div className="text-xs text-[#9CA3AF] font-medium mb-0.5">Email</div>
                   <div className="text-xs sm:text-sm font-semibold text-[#1F2937] group-hover:text-[#0EA5A4] transition-colors break-all">
-                    y.perevoshchikova@email.com
+                    79260655851@ya.ru
                   </div>
                 </div>
               </a>
-              <a href="https://t.me/yulia_pm" className="flex items-center gap-3 sm:gap-4 group">
+              <a href="https://t.me/Yeah_Tavi" className="flex items-center gap-3 sm:gap-4 group">
                 <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#E0F2F2] flex items-center justify-center group-hover:bg-[#0EA5A4] transition-colors flex-shrink-0">
                   <MessageSquare size={17} className="text-[#0EA5A4] group-hover:text-white transition-colors" />
                 </div>
                 <div>
                   <div className="text-xs text-[#9CA3AF] font-medium mb-0.5">Telegram</div>
                   <div className="text-xs sm:text-sm font-semibold text-[#1F2937] group-hover:text-[#0EA5A4] transition-colors">
-                    @yulia_pm
+                    @Yeah_Tavi
                   </div>
                 </div>
               </a>
-              <a href="#" className="flex items-center gap-3 sm:gap-4 group">
-                <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#DBEAFE] flex items-center justify-center group-hover:bg-[#2563EB] transition-colors flex-shrink-0">
-                  <Linkedin size={17} className="text-[#2563EB] group-hover:text-white transition-colors" />
-                </div>
-                <div>
-                  <div className="text-xs text-[#9CA3AF] font-medium mb-0.5">LinkedIn</div>
-                  <div className="text-xs sm:text-sm font-semibold text-[#1F2937] group-hover:text-[#2563EB] transition-colors">
-                    linkedin.com/in/yulia-pm
-                  </div>
-                </div>
-              </a>
+            
             </div>
           </div>
 
@@ -800,35 +787,35 @@ function Contact() {
             ) : (
               <form onSubmit={handleSubmit} className="bg-[#F7F8FA] rounded-2xl border border-[#E5E7EB] p-5 sm:p-8 space-y-4 sm:space-y-5">
                 <div>
-                  <label className="block text-sm font-bold text-[#1F2937] mb-1.5 sm:mb-2">Your Name</label>
+                  <label className="block text-sm font-bold text-[#1F2937] mb-1.5 sm:mb-2">Ваше имя</label>
                   <input
                     type="text"
                     required
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    placeholder="Anna Ivanova"
+                    placeholder="Анна Иванова"
                     className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-white border border-[#E5E7EB] rounded-xl text-sm text-[#1F2937] placeholder-[#9CA3AF] focus:outline-none focus:border-[#0EA5A4] focus:ring-2 focus:ring-[#0EA5A4]/10 transition-all"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-bold text-[#1F2937] mb-1.5 sm:mb-2">Email Address</label>
+                  <label className="block text-sm font-bold text-[#1F2937] mb-1.5 sm:mb-2">Email</label>
                   <input
                     type="email"
                     required
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
-                    placeholder="anna@company.com"
+                    placeholder="anna@company.ru"
                     className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-white border border-[#E5E7EB] rounded-xl text-sm text-[#1F2937] placeholder-[#9CA3AF] focus:outline-none focus:border-[#0EA5A4] focus:ring-2 focus:ring-[#0EA5A4]/10 transition-all"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-bold text-[#1F2937] mb-1.5 sm:mb-2">Message</label>
+                  <label className="block text-sm font-bold text-[#1F2937] mb-1.5 sm:mb-2">Сообщение</label>
                   <textarea
                     required
                     rows={5}
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    placeholder="Tell me about the project or opportunity..."
+                    placeholder="Расскажите мне о проекте или компании..."
                     className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-white border border-[#E5E7EB] rounded-xl text-sm text-[#1F2937] placeholder-[#9CA3AF] focus:outline-none focus:border-[#0EA5A4] focus:ring-2 focus:ring-[#0EA5A4]/10 transition-all resize-none"
                   />
                 </div>
@@ -836,7 +823,7 @@ function Contact() {
                   type="submit"
                   className="w-full inline-flex items-center justify-center gap-2 bg-[#0EA5A4] text-white font-bold py-3 sm:py-3.5 rounded-xl hover:bg-[#0d9190] transition-colors text-sm"
                 >
-                  Send Message <Send size={15} />
+                  Отправить <Send size={15} />
                 </button>
               </form>
             )}
