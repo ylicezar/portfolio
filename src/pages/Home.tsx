@@ -257,13 +257,13 @@ function Hero() {
 
     {/* Плашка «Завершённых проектов» */}
     <div className="absolute -bottom-5 -left-8 bg-white rounded-2xl shadow-md px-4 py-3 border border-[#E5E7EB]">
-      <div className="text-xs text-[#6B7280] font-medium mb-0.5">Законченных<br> проектов</div>
+      <div className="text-xs text-[#6B7280] font-medium mb-0.5">Законченных<br /> проектов</div>
       <div className="text-2xl font-extrabold text-[#1F2937]">50+</div>
     </div>
 
     {/* Плашка «Опыт работы» */}
     <div className="absolute -top-5 -right-8 bg-white rounded-2xl shadow-md px-4 py-3 border border-[#E5E7EB]">
-      <div className="text-xs text-[#6B7280] font-medium mb-0.5">Лет опыта<br> в web</div>
+      <div className="text-xs text-[#6B7280] font-medium mb-0.5">Лет опыта<br /> в web</div>
       <div className="text-2xl font-extrabold text-[#0EA5A4]">15+</div>
     </div>
 
@@ -684,7 +684,7 @@ function Resume() {
             <SectionLabel>Резюме</SectionLabel>
             <SectionHeading className="mb-3 sm:mb-4">Скачать резюме</SectionHeading>
             <p className="text-[#6B7280] text-sm sm:text-base leading-relaxed">
-              Моё резюме в формате PDF. <br>Полный обзор моего профессионального опыта и навыков.
+              Моё резюме в формате PDF. <br />Полный обзор моего профессионального опыта и навыков.
             </p>
           </div>
           <div className="flex flex-col items-center gap-4 sm:gap-5 flex-shrink-0">
