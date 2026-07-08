@@ -7,6 +7,7 @@ export default function App() {
       
       {/* Простое меню */}
       <header className="w-full px-6 py-4 border-b bg-white flex gap-6">
+      <div class="header-menu">
         <Link to="/" className="text-sm font-medium hover:opacity-70">
           Главная
         </Link>
@@ -14,6 +15,7 @@ export default function App() {
         <Link to="/cases" className="text-sm font-medium hover:opacity-70">
           Кейсы
         </Link>
+        </div>
       </header>
 
       {/* Контент страниц */}

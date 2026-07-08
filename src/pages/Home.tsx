@@ -135,7 +135,7 @@ const PROCESS_STEPS = [
   },
 ];
 
-const TESTIMONIALS = [
+{/* const TESTIMONIALS = [
   {
     text: "Excellent project leader with strong business understanding.",
     name: "Anna Petrova",
@@ -155,7 +155,7 @@ const TESTIMONIALS = [
     initial: "M",
   },
 ];
-
+*/}
 function SectionLabel({
   children,
   centered = false,
@@ -200,13 +200,13 @@ function SectionHeading({
 function Hero() {
   return (
     <section id="hero" className="pt-20 sm:pt-24 md:pt-28 pb-14 sm:pb-20 md:pb-24 bg-[#F7F8FA]">
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
+      <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
         <div className="grid md:grid-cols-[1fr_auto] gap-10 md:gap-16 items-center">
           {/* Text */}
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 mb-5">
               <span className="inline-block w-2 h-2 rounded-full bg-[#0EA5A4] animate-pulse" />
-              <span className="text-sm font-medium text-[#0EA5A4]">Управляю веб-проектами от идеи до работающего результата</span>
+              <span className="text-sm font-medium text-[#0EA5A4]">Управляю веб-проектами</span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#1F2937] leading-[1.05] tracking-tight mb-5">
               Юлия<br />Перевощикова
@@ -255,17 +255,18 @@ function Hero() {
       />
     </div>
 
-    {/* Плашка «Завершённых проектов» */}
+
+    {/* Плашка «Завершённых проектов» 
     <div className="absolute -bottom-5 -left-8 bg-white rounded-2xl shadow-md px-4 py-3 border border-[#E5E7EB]">
       <div className="text-xs text-[#6B7280] font-medium mb-0.5">Законченных<br /> проектов</div>
       <div className="text-2xl font-extrabold text-[#1F2937]">50+</div>
-    </div>
+    </div>*/}
 
-    {/* Плашка «Опыт работы» */}
+    {/* Плашка «Опыт работы» 
     <div className="absolute -top-5 -right-8 bg-white rounded-2xl shadow-md px-4 py-3 border border-[#E5E7EB]">
       <div className="text-xs text-[#6B7280] font-medium mb-0.5">Лет опыта<br /> в web</div>
       <div className="text-2xl font-extrabold text-[#0EA5A4]">15+</div>
-    </div>
+    </div>*/}
 
     {/* Декоративные квадратики */}
     <div className="absolute -top-6 -left-6 w-20 h-20 rounded-2xl bg-[#2563EB]/5 border border-[#2563EB]/10 -z-10" />
@@ -299,7 +300,7 @@ function Hero() {
 function Stats() {
   return (
     <section className="py-10 sm:py-12 bg-white border-y border-[#E5E7EB]">
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
+      <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {STATS.map(({ value, label, icon: Icon }, i) => (
             <div
@@ -326,7 +327,7 @@ function Stats() {
 function About() {
   return (
     <section id="about" className="py-16 sm:py-20 md:py-24 bg-[#F7F8FA]">
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
+      <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-2 gap-10 md:gap-14 lg:gap-16 items-start">
           <div>
             <SectionLabel>Обо мне</SectionLabel>
@@ -432,7 +433,7 @@ function ProjectCard({ project }: { project: typeof PROJECTS[0] }) {
 function Projects() {
   return (
     <section id="projects" className="py-16 sm:py-20 md:py-24 bg-[#F7F8FA]">
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
+      <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 sm:gap-6 mb-10 sm:mb-14">
           <div>
             <SectionLabel>Рекомендуемые проекты</SectionLabel>
@@ -459,7 +460,7 @@ function Experience() {
 
   return (
     <section id="experience" className="py-16 sm:py-20 md:py-24 bg-white">
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
+      <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-3 gap-10 md:gap-14 lg:gap-16 items-start">
           <div>
             <SectionLabel>Опыт работы</SectionLabel>
@@ -476,7 +477,7 @@ function Experience() {
                 {EXPERIENCE.map((exp, idx) => (
                   <div key={idx} className="relative pl-10 sm:pl-12">
                     <div
-                      className={`absolute left-[14px] top-6 w-2.5 h-2.5 rounded-full border-2 -translate-x-1/2 transition-colors z-10 ${
+                      className={`absolute left-[19px] top-6 w-2.5 h-2.5 rounded-full border-2 -translate-x-1/2 transition-colors z-10 ${
                         exp.isCurrent
                           ? "bg-[#0EA5A4] border-[#0EA5A4]"
                           : openIdx === idx
@@ -498,7 +499,7 @@ function Experience() {
                             {exp.period}
                             {exp.isCurrent && (
                               <span className="inline-block text-[10px] font-semibold bg-[#E0F2F2] text-[#0EA5A4] px-2 py-0.5 rounded-full uppercase tracking-wide">
-                                Current
+                                Сейчас
                               </span>
                             )}
                           </div>
@@ -562,7 +563,7 @@ function Tools() {
 
   return (
     <section id="tools" className="py-16 sm:py-20 md:py-24 bg-[#F7F8FA]">
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
+      <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
         <div className="text-center mb-10 sm:mb-14">
           <SectionLabel centered>Инструменты и технологии</SectionLabel>
           <SectionHeading>Профессиональный набор инструментов</SectionHeading>
@@ -603,7 +604,7 @@ function Tools() {
 function Process() {
   return (
     <section className="py-16 sm:py-20 md:py-24 bg-white">
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
+      <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 sm:mb-16">
           <SectionLabel centered>Подход к работе</SectionLabel>
           <SectionHeading>Как я управляю проектами</SectionHeading>
@@ -633,12 +634,13 @@ function Process() {
   );
 }
 
-// ─── Testimonials ─────────────────────────────────────────────────────────────
+{/*
+ ─── Testimonials ─────────────────────────────────────────────────────────────
 
 function Testimonials() {
   return (
     <section className="py-16 sm:py-20 md:py-24 bg-[#1F2937]">
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
+      <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
         <div className="text-center mb-10 sm:mb-14">
           <div className="flex items-center justify-center gap-2 mb-3">
             <div className="w-6 h-px bg-[#0EA5A4]" />
@@ -672,13 +674,14 @@ function Testimonials() {
     </section>
   );
 }
+*/}
 
 // ─── Resume Download ──────────────────────────────────────────────────────────
 
 function Resume() {
   return (
     <section id="resume" className="py-16 sm:py-20 md:py-24 bg-[#F7F8FA]">
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
+      <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
         <div className="bg-white rounded-2xl sm:rounded-3xl border border-[#E5E7EB] p-7 sm:p-10 md:p-14 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-10">
           <div className="max-w-lg w-full md:w-auto">
             <SectionLabel>Резюме</SectionLabel>
@@ -732,7 +735,7 @@ function Contact() {
 
   return (
     <section id="contact" className="py-16 sm:py-20 md:py-24 bg-white">
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
+      <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-start">
           <div>
             <SectionLabel>Контакты</SectionLabel>
@@ -844,7 +847,7 @@ function Home() {
       <Experience />
       <Tools />
       <Process />
-      <Testimonials />
+ //   <Testimonials />
       <Resume />
       <Contact />
     </>
