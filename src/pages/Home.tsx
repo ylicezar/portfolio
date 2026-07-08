@@ -847,7 +847,7 @@ function Home() {
       <Experience />
       <Tools />
       <Process />
- //   <Testimonials />
+ {/*  <Testimonials /> */}
       <Resume />
       <Contact />
     </>
