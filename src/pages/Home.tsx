@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from "react";
+import { Link } from "react-router";
 import {
   ArrowRight,
   Briefcase,
@@ -27,13 +28,14 @@ const STATS = [
 const PROJECTS = [
   {
     id: 1,
-    image: "https://placehold.co/600x400",
-    title: "Healthcare Portal",
-    role: "Project Manager",
-    tags: ["Healthcare", "UX", "CMS"],
-    challenge: "Legacy platform modernization.",
-    actions: "Managed redesign and development process.",
-    results: "Improved usability and content management.",
+    image: "https://placehold.co/600x400", // сюда потом можно поставить свой скриншот
+    title: "Редизайн сайта audiometr.ru",
+    role: "Digital Project Lead",
+    tags: ["Редизайн", "UX", "B2B каталог"],
+    challenge: "Устаревший фирменный стиль 2013 года и отсутствие адаптива.",
+    actions: "Обновили визуальный стиль, каталог с фильтрами, карточку товара, адаптив.",
+    results: "Современный сайт, отражающий статус официального дистрибьютора.",
+    link: "/cases/audiometr", // ← добавляешь эту строку
   },
   {
     id: 2,
@@ -378,7 +380,6 @@ function About() {
 
 function ProjectCard({ project }: { project: typeof PROJECTS[0] }) {
   const [expanded, setExpanded] = useState(false);
-
   return (
     <div className="bg-white rounded-2xl border border-[#E5E7EB] overflow-hidden hover:shadow-md transition-all flex flex-col">
       <div className="h-40 sm:h-44 bg-[#E0F2F2] overflow-hidden flex-shrink-0">
@@ -398,7 +399,6 @@ function ProjectCard({ project }: { project: typeof PROJECTS[0] }) {
         </div>
         <h3 className="font-extrabold text-[#1F2937] text-sm sm:text-base leading-snug mb-1">{project.title}</h3>
         <p className="text-xs font-semibold text-[#0EA5A4] mb-4">{project.role}</p>
-
         {expanded && (
           <div className="space-y-4 mb-5 pt-4 border-t border-[#E5E7EB]">
             <div>
@@ -415,15 +415,24 @@ function ProjectCard({ project }: { project: typeof PROJECTS[0] }) {
             </div>
           </div>
         )}
-
         <div className="mt-auto">
-          <button
-            onClick={() => setExpanded(!expanded)}
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#0EA5A4] hover:text-[#0d9190] transition-colors"
-          >
-            {expanded ? "Hide details" : "View case study"}
-            {expanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
-          </button>
+          {project.link ? (
+            <Link
+              to={project.link}
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#0EA5A4] hover:text-[#0d9190] transition-colors"
+            >
+              Смотреть кейс
+              <ArrowRight size={14} />
+            </Link>
+          ) : (
+            <button
+              onClick={() => setExpanded(!expanded)}
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#0EA5A4] hover:text-[#0d9190] transition-colors"
+            >
+              {expanded ? "Hide details" : "View case study"}
+              {expanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+            </button>
+          )}
         </div>
       </div>
     </div>
