@@ -3,6 +3,7 @@ import App from "./App";
 import Home from "../pages/Home";
 import Projects from "../pages/Projects";
 import ProjectDetails from "../pages/ProjectDetails";
+import CaseAudiometr from "../pages/CaseAudiometr";
 
 export const router = createBrowserRouter([
   {
