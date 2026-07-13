@@ -4,17 +4,17 @@ import Footer from "./components/Footer";
 export default function App() {
   return (
     <div className="min-h-screen bg-[#F7F8FA] flex flex-col">
-      
-      {/* Простое меню */}
-      <header className="w-full px-6 py-4 border-b bg-white flex gap-6">
-      <div class="header-menu">
-        <Link to="/" className="text-sm font-medium hover:opacity-70">
-          Главная
-        </Link>
 
-        <Link to="/cases" className="text-sm font-medium hover:opacity-70">
-          Кейсы
-        </Link>
+      {/* Простое меню */}
+      <header className="w-full border-b bg-white">
+        <div className="max-w-[1080px] mx-auto px-4 sm:px-6 py-4 flex items-center gap-6">
+          <Link to="/" className="text-sm font-medium hover:opacity-70">
+            Главная
+          </Link>
+
+          <Link to="/cases" className="text-sm font-medium hover:opacity-70">
+            Кейсы
+          </Link>
         </div>
       </header>
 

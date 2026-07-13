@@ -285,16 +285,27 @@ export default function CaseAudiometr() {
       </section>
 
       {/* Responsive */}
-      <section className="py-16 sm:py-20 md:py-24 bg-white">
-        <div className="max-w-[1080px] mx-auto px-4 sm:px-6 text-center">
-          <SectionLabel>Адаптивность</SectionLabel>
-          <SectionHeading className="mb-8 sm:mb-10">Один интерфейс — любой экран</SectionHeading>
-          <div className="rounded-2xl overflow-hidden border border-[#E5E7EB] bg-[#F7F8FA] inline-block max-w-full">
-            <img
-              src={`${IMG}/after-4-responsive.png`}
-              alt="Адаптивная вёрстка на разных устройствах"
-              className="w-full h-auto max-w-3xl mx-auto"
-            />
+      <section className="py-16 sm:py-20 md:py-24 bg-white overflow-hidden">
+        <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
+          <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] gap-8 lg:gap-4 items-center">
+            <div className="relative z-10 lg:pr-6">
+              <SectionLabel>Адаптивность</SectionLabel>
+              <SectionHeading className="mb-4">Один интерфейс — любой экран</SectionHeading>
+              <p className="text-sm sm:text-base text-[#6B7280] leading-relaxed max-w-md">
+                Каталог, фильтры и карточки товара выстроены по единой сетке и одинаково удобны
+                на десктопе, планшете и мобильном — интерфейс адаптируется под любой экран без потери
+                в удобстве.
+              </p>
+            </div>
+            <div className="relative lg:-ml-10 xl:-ml-16">
+              <div className="rounded-2xl overflow-hidden border border-[#E5E7EB] bg-[#F7F8FA]">
+                <img
+                  src={`${IMG}/after-4-responsive.png`}
+                  alt="Адаптивная вёрстка на разных устройствах"
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
