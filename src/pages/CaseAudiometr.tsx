@@ -101,12 +101,12 @@ const RESULTS = [
 ];
 
 function BeforeAfter({
-  beforeSrc,
+  beforeSrcs,
   afterSrc,
   beforeLabel = "До",
   afterLabel = "После",
 }: {
-  beforeSrc: string;
+  beforeSrcs: string[];
   afterSrc: string;
   beforeLabel?: string;
   afterLabel?: string;
@@ -117,8 +117,12 @@ function BeforeAfter({
         <div className="inline-block text-xs font-bold uppercase tracking-wider text-[#9CA3AF] bg-[#F3F4F6] px-2.5 py-1 rounded-full mb-3">
           {beforeLabel}
         </div>
-        <div className="rounded-2xl overflow-hidden border border-[#E5E7EB] bg-white">
-          <img src={beforeSrc} alt={beforeLabel} className="w-full h-auto object-cover object-top" />
+        <div className="space-y-4 sm:space-y-6">
+          {beforeSrcs.map((src, i) => (
+            <div key={src} className="rounded-2xl overflow-hidden border border-[#E5E7EB] bg-white">
+              <img src={src} alt={`${beforeLabel} ${i + 1}`} className="w-full h-auto object-cover object-top" />
+            </div>
+          ))}
         </div>
       </div>
       <div>
@@ -157,13 +161,24 @@ export default function CaseAudiometr() {
             ))}
           </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#1F2937] leading-[1.1] tracking-tight mb-5 max-w-3xl">
-            Редизайн сайта audiometr.ru: обновление фирменного стиля и улучшение UX
-          </h1>
-          <p className="text-lg text-[#6B7280] leading-relaxed max-w-2xl mb-10">
-            Официальный дистрибьютор аудиометрического оборудования в России нуждался в сайте,
-            который выглядит и работает так же профессионально, как и его продукция.
-          </p>
+          <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-8 lg:gap-10 items-center mb-10">
+            <div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#1F2937] leading-[1.1] tracking-tight mb-5">
+                Редизайн сайта audiometr.ru: обновление фирменного стиля и улучшение UX
+              </h1>
+              <p className="text-lg text-[#6B7280] leading-relaxed">
+                Официальный дистрибьютор аудиометрического оборудования в России нуждался в сайте,
+                который выглядит и работает так же профессионально, как и его продукция.
+              </p>
+            </div>
+            <div>
+              <img
+                src={`${IMG}/after-4-responsive.png`}
+                alt="Адаптивная вёрстка на разных устройствах"
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-2">
             {META.map(({ icon: Icon, label, value }) => (
@@ -185,9 +200,9 @@ export default function CaseAudiometr() {
       <section className="pb-16 sm:pb-20 md:pb-24 bg-[#F7F8FA]">
         <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
           <BeforeAfter
-            beforeSrc={`${IMG}/before-1-old-2013.png`}
+            beforeSrcs={[`${IMG}/before-1-old-2013.png`, `${IMG}/before-2-old-2015.png`]}
             afterSrc={`${IMG}/after-1-home.png`}
-            beforeLabel="До · 2013"
+            beforeLabel="До · 2013–2015"
             afterLabel="После · 2026"
           />
         </div>
@@ -280,32 +295,6 @@ export default function CaseAudiometr() {
           </SectionHeading>
           <div className="rounded-2xl overflow-hidden border border-[#E5E7EB] bg-white">
             <img src={`${IMG}/after-3-product.png`} alt="Карточка товара после редизайна" className="w-full h-auto" />
-          </div>
-        </div>
-      </section>
-
-      {/* Responsive */}
-      <section className="py-16 sm:py-20 md:py-24 bg-white overflow-hidden">
-        <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
-          <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] gap-8 lg:gap-4 items-center">
-            <div className="relative z-10 lg:pr-6">
-              <SectionLabel>Адаптивность</SectionLabel>
-              <SectionHeading className="mb-4">Один интерфейс — любой экран</SectionHeading>
-              <p className="text-sm sm:text-base text-[#6B7280] leading-relaxed max-w-md">
-                Каталог, фильтры и карточки товара выстроены по единой сетке и одинаково удобны
-                на десктопе, планшете и мобильном — интерфейс адаптируется под любой экран без потери
-                в удобстве.
-              </p>
-            </div>
-            <div className="relative lg:-ml-10 xl:-ml-16">
-              <div className="rounded-2xl overflow-hidden border border-[#E5E7EB] bg-[#F7F8FA]">
-                <img
-                  src={`${IMG}/after-4-responsive.png`}
-                  alt="Адаптивная вёрстка на разных устройствах"
-                  className="w-full h-auto"
-                />
-              </div>
-            </div>
           </div>
         </div>
       </section>
