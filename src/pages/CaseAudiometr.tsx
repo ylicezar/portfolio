@@ -14,17 +14,8 @@ import {
   Users,
 } from "lucide-react";
 
-/**
- * ─── Как подключить ────────────────────────────────────────────────────────
- * 1. Положите этот файл в src/pages/CaseAudiometr.tsx
- * 2. Картинки (before-*.png / after-*.png) — в public/cases/audiometr/
- * 3. Добавьте маршрут в src/app/router.tsx, например:
- *      { path: "/cases/audiometr", element: <CaseAudiometr /> }
- * 4. На карточку проекта на Home/Projects повесьте ссылку на "/cases/audiometr"
- * ────────────────────────────────────────────────────────────────────────────
- */
 
-const IMG = "/cases/audiometr"; // поменяйте на свой путь, если положите иначе
+const IMG = "/cases/audiometr"; 
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
@@ -43,9 +34,9 @@ function SectionHeading({ children, className = "" }: { children: React.ReactNod
 }
 
 const META = [
-  { icon: Users, label: "Роль", value: "Digital Project Lead" },
-  { icon: Calendar, label: "Период", value: "2025 — 2026" },
-  { icon: Target, label: "Клиент", value: "audiometr.ru" },
+  { icon: Users, label: "Роль", value: "Руководитель проекта" },
+  { icon: Calendar, label: "Период", value: "2021" },
+  { icon: Target, label: "Сайт", value: "audiometr.ru" },
 ];
 
 const GOALS = [
@@ -57,7 +48,7 @@ const GOALS = [
   {
     icon: Smartphone,
     title: "Нет адаптива",
-    desc: "Сайт не работал на мобильных устройствах и планшетах — а именно оттуда шла всё большая доля трафика.",
+    desc: "Сайт не работал на мобильных устройствах и планшетах — а оттуда шла весомая доля трафика.",
   },
   {
     icon: Filter,
@@ -75,22 +66,22 @@ const ACTIONS = [
   {
     step: "02",
     title: "Каталог с фильтрацией",
-    desc: "Перепроектировали структуру каталога: фильтры по производителю (Interacoustics, Inventis, Sibelmed, Maico и др.) и по функционалу устройства — клинические, скрининговые, импедансометры.",
+    desc: "Перепроектировали структуру каталога: фильтры по производителю (Interacoustics, Inventis, Sibelmed, Maico и др.) и по функционалу устройства – клинические, скрининговые, диагностические.",
   },
   {
     step: "03",
     title: "Карточка товара",
-    desc: "Ввели единый шаблон карточки: характеристики, комплектация, похожие товары, чёткий призыв к действию «Запросить КП» вместо скрытых цен без контекста.",
+    desc: "Ввели единый шаблон карточки: характеристики, тесты, комплектация, похожие товары, чёткий призыв к действию «Запросить КП» вместо скрытых цен без контекста.",
   },
   {
     step: "04",
     title: "Экспертный контент",
-    desc: "Добавили раздел «Статьи для специалистов» и «Новости аудиологии» — это укрепило позиционирование компании как экспертного игрока рынка, а не просто витрины.",
+    desc: "Добавили раздел «Статьи для специалистов» и «Новости аудиологии» – это укрепило позиционирование компании как экспертного игрока рынка, а не просто витрины.",
   },
   {
     step: "05",
     title: "Полная адаптивность",
-    desc: "Собрали интерфейс по единой сетке для десктопа, планшета и мобильного — каталог, фильтры и карточки товара одинаково удобны на любом экране.",
+    desc: "Собрали интерфейс по единой сетке для десктопа, планшета и мобильного – каталог, фильтры и карточки товара одинаково удобны на любом экране.",
   },
 ];
 
@@ -151,7 +142,7 @@ export default function CaseAudiometr() {
           </Link>
 
           <div className="flex flex-wrap gap-2 mb-5">
-            {["Редизайн", "UX", "B2B каталог", "Медицинское оборудование"].map((t) => (
+            {["Редизайн", "UX", "UI", "B2B каталог", "Медицинское оборудование"].map((t) => (
               <span
                 key={t}
                 className="text-xs font-semibold tracking-wide uppercase px-3 py-1.5 bg-white border border-[#E5E7EB] rounded-full text-[#6B7280]"
@@ -163,12 +154,11 @@ export default function CaseAudiometr() {
 
           <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-8 lg:gap-10 items-center mb-10">
             <div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#1F2937] leading-[1.1] tracking-tight mb-5">
+              <h1 className="text-3xl sm:text-4xl md:text-4xl font-extrabold text-[#1F2937] leading-[1.1] tracking-tight mb-5">
                 Редизайн сайта audiometr.ru: обновление фирменного стиля и улучшение UX
               </h1>
               <p className="text-lg text-[#6B7280] leading-relaxed">
-                Официальный дистрибьютор аудиометрического оборудования в России нуждался в сайте,
-                который выглядит и работает так же профессионально, как и его продукция.
+                Сайт официального дистрибьютора аудиометрического оборудования от крупных международных брендом в России.
               </p>
             </div>
             <div>
@@ -202,8 +192,8 @@ export default function CaseAudiometr() {
           <BeforeAfter
             beforeSrcs={[`${IMG}/before-1-old-2013.png`, `${IMG}/before-2-old-2015.png`]}
             afterSrc={`${IMG}/after-1-home.png`}
-            beforeLabel="До · 2013–2015"
-            afterLabel="После · 2026"
+            beforeLabel="До · 2021"
+            afterLabel="После · 2022"
           />
         </div>
       </section>
@@ -215,10 +205,10 @@ export default function CaseAudiometr() {
             <div>
               <SectionLabel>Задача</SectionLabel>
               <SectionHeading className="mb-5">
-                Сайту больше десяти лет — и это было видно с первого экрана
+                Увеличить продажи и сформировать фирменный стиль достойный статуса компании
               </SectionHeading>
               <p className="text-[#6B7280] leading-relaxed text-sm sm:text-base">
-                Компания официально представляет в России несколько крупных производителей
+                "Медафарм" официально представляет в России несколько крупных производителей
                 аудиометрического оборудования, но сайт не отражал этот статус. Устаревшая графика,
                 отсутствие мобильной версии и запутанный каталог мешали как новым клиентам, так и
                 отделу продаж, который ежедневно отправлял ссылки на карточки товаров.
