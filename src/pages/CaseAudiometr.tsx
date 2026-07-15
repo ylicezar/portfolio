@@ -255,7 +255,7 @@ export default function CaseAudiometr() {
       <section className="pb-16 sm:pb-20 md:pb-24 bg-[#F7F8FA]">
         <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
           <BeforeAfter
-            beforeSrcs={[`${IMG}/before-1-old-2013.png`, `${IMG}/before-2-old-2015.png`]}
+            beforeSrcs={[`${IMG}/before-1-old-2013.png`, `${IMG}/before-2-old-2015.png`, `${IMG}/before-3-old-2015.png`]}
             afterSrc={`${IMG}/after-1-home.png`}
             beforeLabel="До · 2021"
             afterLabel="После · 2022"
@@ -264,7 +264,7 @@ export default function CaseAudiometr() {
       </section>
 
       {/* Challenge */}
-      <section className="pt-8 sm:pt-10 md:pt-12 pb-16 sm:pb-20 md:pb-24 bg-white">
+      <section className="pt-[37px] sm:pt-[45px] md:pt-[53px] pb-16 sm:pb-20 md:pb-24 bg-white">
         <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start mb-12">
             <div>
@@ -300,7 +300,7 @@ export default function CaseAudiometr() {
       </section>
 
       {/* Roadmap */}
-      <section className="pt-8 sm:pt-10 md:pt-12 pb-16 sm:pb-20 md:pb-24 bg-white">
+      <section className="pt-[18.5px] sm:pt-[22.5px] md:pt-[26.5px] pb-16 sm:pb-20 md:pb-24 bg-white">
         <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
           <SectionLabel>Дорожная карта</SectionLabel>
           <SectionHeading className="mb-2">Как прошёл проект: 2 месяца, 4 спринта</SectionHeading>
@@ -310,7 +310,6 @@ export default function CaseAudiometr() {
           </p>
 
           <div className="relative">
-            <div className="hidden lg:block absolute top-[7px] left-[12.5%] right-[12.5%] border-t border-dashed border-[#D1D5DB]" />
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               {ROADMAP.map(({ sprint, dates, weeks, phase, color, icon: Icon, tasks }) => {
                 const style = PHASE_STYLES[color];
@@ -365,7 +364,7 @@ export default function CaseAudiometr() {
       </section>
 
       {/* Actions */}
-      <section className="pt-8 sm:pt-10 md:pt-12 pb-16 sm:pb-20 md:pb-24 bg-[#F7F8FA]">
+      <section className="pt-[37px] sm:pt-[45px] md:pt-[53px] pb-16 sm:pb-20 md:pb-24 bg-[#F7F8FA]">
         <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
           <SectionLabel>Что было сделано</SectionLabel>
           <SectionHeading className="mb-10 sm:mb-14">Пять шагов от старого сайта к новому</SectionHeading>
@@ -390,7 +389,7 @@ export default function CaseAudiometr() {
       </section>
 
       {/* Catalog before/after */}
-      <section className="pt-8 sm:pt-10 md:pt-12 pb-16 sm:pb-20 md:pb-24 bg-white">
+      <section className="pt-[37px] sm:pt-[45px] md:pt-[53px] pb-16 sm:pb-20 md:pb-24 bg-white">
         <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
           <SectionLabel>Каталог</SectionLabel>
           <SectionHeading className="mb-8 sm:mb-10">
@@ -407,7 +406,7 @@ export default function CaseAudiometr() {
       </section>
 
       {/* Product page */}
-      <section className="pt-8 sm:pt-10 md:pt-12 pb-16 sm:pb-20 md:pb-24 bg-[#F7F8FA]">
+      <section className="pt-[37px] sm:pt-[45px] md:pt-[53px] pb-16 sm:pb-20 md:pb-24 bg-[#F7F8FA]">
         <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
           <SectionLabel>Карточка товара</SectionLabel>
           <SectionHeading className="mb-8 sm:mb-10">
@@ -420,7 +419,7 @@ export default function CaseAudiometr() {
       </section>
 
       {/* Results */}
-      <section className="pt-8 sm:pt-10 md:pt-12 pb-16 sm:pb-20 md:pb-24 bg-[#1F2937]">
+      <section className="pt-[37px] sm:pt-[45px] md:pt-[53px] pb-16 sm:pb-20 md:pb-24 bg-[#1F2937]">
         <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-14">
             <div className="text-sm font-semibold uppercase tracking-wider text-[#0EA5A4] mb-3">Результат</div>
