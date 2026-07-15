@@ -5,9 +5,12 @@ import {
   ArrowRight,
   Calendar,
   CheckCircle,
+  Code2,
   Filter,
   Layout,
   Palette,
+  Rocket,
+  Search,
   Smartphone,
   Target,
   TrendingUp,
@@ -89,6 +92,68 @@ const RESULTS = [
   { icon: TrendingUp, value: "100%", label: "адаптивный интерфейс на всех устройствах" },
   { icon: Layout, value: "50+", label: "моделей аккуратно структурированы по фильтрам" },
   { icon: CheckCircle, value: "3", label: "новых раздела: статьи, новости, доверие клиентов" },
+];
+
+const PHASE_STYLES: Record<string, { band: string; tagBg: string; tagText: string; border: string; dot: string }> = {
+  gray: { band: "bg-[#6B7280]", tagBg: "bg-[#F3F4F6]", tagText: "text-[#4B5563]", border: "border-l-[#9CA3AF]", dot: "bg-[#9CA3AF]" },
+  teal: { band: "bg-[#0EA5A4]", tagBg: "bg-[#E0F2F2]", tagText: "text-[#0EA5A4]", border: "border-l-[#0EA5A4]", dot: "bg-[#0EA5A4]" },
+  amber: { band: "bg-[#F59E0B]", tagBg: "bg-[#FEF3E2]", tagText: "text-[#B45309]", border: "border-l-[#F59E0B]", dot: "bg-[#F59E0B]" },
+  blue: { band: "bg-[#2563EB]", tagBg: "bg-[#EFF4FE]", tagText: "text-[#1D4ED8]", border: "border-l-[#2563EB]", dot: "bg-[#2563EB]" },
+};
+
+const ROADMAP = [
+  {
+    sprint: "Спринт 1",
+    dates: "1–12 марта",
+    weeks: "Недели 1–2",
+    phase: "Аудит",
+    color: "gray",
+    icon: Search,
+    tasks: [
+      { title: "Технический аудит Drupal 6", desc: "Модули, производительность, уязвимости ядра" },
+      { title: "SEO-аудит и карта URL", desc: "Позиции в Яндекс/Google, сбор метаданных" },
+      { title: "UX/UI-аудит для B2B", desc: "Поведение пользователей, интервью с продажами" },
+    ],
+  },
+  {
+    sprint: "Спринт 2",
+    dates: "15–26 марта",
+    weeks: "Недели 3–4",
+    phase: "Проектирование",
+    color: "teal",
+    icon: Palette,
+    tasks: [
+      { title: "Информационная архитектура", desc: "Каталог оборудования, навигация, фильтры" },
+      { title: "Дизайн-система и UI Kit", desc: "Палитра, типографика, адаптивная версия" },
+      { title: "Прототипы ключевых экранов", desc: "Главная, каталог, карточка товара" },
+    ],
+  },
+  {
+    sprint: "Спринт 3",
+    dates: "29 марта – 9 апреля",
+    weeks: "Недели 5–6",
+    phase: "Реализация",
+    color: "amber",
+    icon: Code2,
+    tasks: [
+      { title: "Миграция ядра Drupal 6 → 7", desc: "Бэкапы, update.php, новая структура БД" },
+      { title: "Перенос функционала и вёрстка", desc: "Аналоги модулей, интеграция шаблона" },
+      { title: "Миграция контента и SEO", desc: "Модуль Migrate, 301-редиректы, sitemap" },
+    ],
+  },
+  {
+    sprint: "Спринт 4",
+    dates: "12–23 апреля",
+    weeks: "Недели 7–8",
+    phase: "Запуск",
+    color: "blue",
+    icon: Rocket,
+    tasks: [
+      { title: "Лидогенерация и контент", desc: "Формы заявок, интеграция с CRM" },
+      { title: "Тестирование и релиз", desc: "Юзабилити-тесты, перенос на хостинг" },
+      { title: "Пострелизный мониторинг", desc: "Контроль позиций и редиректов" },
+    ],
+  },
 ];
 
 function BeforeAfter({
@@ -199,7 +264,7 @@ export default function CaseAudiometr() {
       </section>
 
       {/* Challenge */}
-      <section className="py-16 sm:py-20 md:py-24 bg-white">
+      <section className="pt-8 sm:pt-10 md:pt-12 pb-16 sm:pb-20 md:pb-24 bg-white">
         <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start mb-12">
             <div>
@@ -234,8 +299,73 @@ export default function CaseAudiometr() {
         </div>
       </section>
 
+      {/* Roadmap */}
+      <section className="pt-8 sm:pt-10 md:pt-12 pb-16 sm:pb-20 md:pb-24 bg-white">
+        <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
+          <SectionLabel>Дорожная карта</SectionLabel>
+          <SectionHeading className="mb-2">Как прошёл проект: 2 месяца, 4 спринта</SectionHeading>
+          <p className="text-sm sm:text-base text-[#6B7280] leading-relaxed max-w-2xl mb-10 sm:mb-14">
+            Agile-план редизайна и миграции с Drupal 6 на Drupal 7 — от аудита до запуска и
+            пострелизного мониторинга. Март – апрель 2021.
+          </p>
+
+          <div className="relative">
+            <div className="hidden lg:block absolute top-[7px] left-[12.5%] right-[12.5%] border-t border-dashed border-[#D1D5DB]" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+              {ROADMAP.map(({ sprint, dates, weeks, phase, color, icon: Icon, tasks }) => {
+                const style = PHASE_STYLES[color];
+                return (
+                  <div key={sprint}>
+                    <div className={`${style.band} text-white text-xs font-bold text-center py-2 rounded-lg mb-4`}>
+                      {sprint}
+                    </div>
+                    <div className="hidden lg:flex justify-center mb-2">
+                      <span className={`w-3 h-3 rounded-full ${style.dot} ring-4 ring-white`} />
+                    </div>
+                    <div className="text-center mb-4">
+                      <div className="text-xs font-bold text-[#1F2937]">{dates}</div>
+                      <div className="text-[10px] uppercase tracking-wide text-[#9CA3AF] mt-0.5">{weeks}</div>
+                    </div>
+                    <div className="space-y-3">
+                      {tasks.map((t) => (
+                        <div
+                          key={t.title}
+                          className={`bg-[#F7F8FA] rounded-xl border border-[#E5E7EB] border-l-4 ${style.border} p-4`}
+                        >
+                          <span
+                            className={`inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full mb-2 ${style.tagBg} ${style.tagText}`}
+                          >
+                            <Icon size={11} /> {phase}
+                          </span>
+                          <div className="font-bold text-[#1F2937] text-sm mb-1">{t.title}</div>
+                          <div className="text-xs text-[#6B7280] leading-relaxed">{t.desc}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="flex flex-wrap gap-4 sm:gap-6 mt-10 sm:mt-12 pt-6 border-t border-[#E5E7EB]">
+            {[
+              { label: "Аудит и анализ", color: "gray" },
+              { label: "Проектирование", color: "teal" },
+              { label: "Реализация", color: "amber" },
+              { label: "Запуск и поддержка", color: "blue" },
+            ].map(({ label, color }) => (
+              <div key={label} className="flex items-center gap-2 text-xs text-[#6B7280]">
+                <span className={`w-2.5 h-2.5 rounded-full ${PHASE_STYLES[color].dot}`} />
+                {label}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Actions */}
-      <section className="py-16 sm:py-20 md:py-24 bg-[#F7F8FA]">
+      <section className="pt-8 sm:pt-10 md:pt-12 pb-16 sm:pb-20 md:pb-24 bg-[#F7F8FA]">
         <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
           <SectionLabel>Что было сделано</SectionLabel>
           <SectionHeading className="mb-10 sm:mb-14">Пять шагов от старого сайта к новому</SectionHeading>
@@ -260,7 +390,7 @@ export default function CaseAudiometr() {
       </section>
 
       {/* Catalog before/after */}
-      <section className="py-16 sm:py-20 md:py-24 bg-white">
+      <section className="pt-8 sm:pt-10 md:pt-12 pb-16 sm:pb-20 md:pb-24 bg-white">
         <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
           <SectionLabel>Каталог</SectionLabel>
           <SectionHeading className="mb-8 sm:mb-10">
@@ -277,7 +407,7 @@ export default function CaseAudiometr() {
       </section>
 
       {/* Product page */}
-      <section className="py-16 sm:py-20 md:py-24 bg-[#F7F8FA]">
+      <section className="pt-8 sm:pt-10 md:pt-12 pb-16 sm:pb-20 md:pb-24 bg-[#F7F8FA]">
         <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
           <SectionLabel>Карточка товара</SectionLabel>
           <SectionHeading className="mb-8 sm:mb-10">
@@ -290,7 +420,7 @@ export default function CaseAudiometr() {
       </section>
 
       {/* Results */}
-      <section className="py-16 sm:py-20 md:py-24 bg-[#1F2937]">
+      <section className="pt-8 sm:pt-10 md:pt-12 pb-16 sm:pb-20 md:pb-24 bg-[#1F2937]">
         <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-14">
             <div className="text-sm font-semibold uppercase tracking-wider text-[#0EA5A4] mb-3">Результат</div>
