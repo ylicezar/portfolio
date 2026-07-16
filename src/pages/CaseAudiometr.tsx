@@ -258,7 +258,7 @@ export default function CaseAudiometr() {
             beforeSrcs={[`${IMG}/before-1-old-2013.png`, `${IMG}/before-2-old-2015.png`, `${IMG}/before-3-old-2015.png`]}
             afterSrc={`${IMG}/after-1-home.png`}
             beforeLabel="До · 2021"
-            afterLabel="После · 2022"
+            afterLabel="После · 2022-2026"
           />
         </div>
       </section>
