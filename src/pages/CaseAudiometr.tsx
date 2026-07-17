@@ -160,7 +160,7 @@ function BeforeAfter({
   beforeSrcs,
   afterSrc,
   beforeLabel = "До",
-  afterLabel = "После",
+  afterLabel = "Сейчас",
 }: {
   beforeSrcs: string[];
   afterSrc: string;
