@@ -5,11 +5,8 @@ import {
   ArrowRight,
   Calendar,
   CheckCircle,
-  Filter,
   Layout,
   ListChecks,
-  MapPin,
-  MessageSquare,
   Search,
   Smartphone,
   Stethoscope,
@@ -175,13 +172,32 @@ export default function CaseDetiKlinika() {
         </div>
       </section>
 
-      {/* Hero visual: homepage + menu */}
+      {/* Hero visual: homepage + doctors + services */}
       <section className="pb-16 sm:pb-20 md:pb-24 bg-[#F7F8FA]">
         <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
           <BeforeAfter
-            srcs={[`${IMG}/after-1-home.webp`, `${IMG}/after-3-menu.webp`]}
-            labels={["Главная страница", "Меню услуг"]}
+            srcs={[`${IMG}/after-1-home.webp`, `${IMG}/after-2-doctors.webp`, `${IMG}/after-5-service.webp`]}
+            labels={["Главная страница", "Страница «Врачи»", "Страница «Услуги»"]}
           />
+
+          <div className="mt-10 sm:mt-14">
+            <SectionLabel>Меню сайта</SectionLabel>
+            <SectionHeading className="mb-5 sm:mb-6">
+              Меню в две колонки вместо длинного списка ссылок
+            </SectionHeading>
+            <p className="text-sm sm:text-base text-[#6B7280] leading-relaxed max-w-2xl mb-8 sm:mb-10">
+              Выстроили меню по смыслу: диагностика, реабилитация и специалисты — с быстрыми
+              ссылками на вакцинацию, личного врача, услуги на дому и справки для спорта. Родитель
+              сразу видит всю структуру сайта, а не листает разделы вслепую.
+            </p>
+            <div className="rounded-2xl overflow-hidden border border-[#E5E7EB] bg-white shadow-sm">
+              <img
+                src={`${IMG}/after-3-menu.webp`}
+                alt="Меню сайта в две колонки"
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -246,25 +262,8 @@ export default function CaseDetiKlinika() {
         </div>
       </section>
 
-      {/* Doctors catalog */}
-      <section className="pt-[37px] sm:pt-[45px] md:pt-[53px] pb-16 sm:pb-20 md:pb-24 bg-white">
-        <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
-          <SectionLabel>Каталог врачей</SectionLabel>
-          <SectionHeading className="mb-8 sm:mb-10">
-            Фильтр по специальности и поиск по ФИО вместо сплошного списка
-          </SectionHeading>
-          <p className="text-sm sm:text-base text-[#6B7280] leading-relaxed max-w-2xl mb-8 sm:mb-10">
-            Больше 50 врачей клиники теперь можно найти по специальности или фамилии за пару секунд —
-            карточка каждого доктора сразу показывает должность, специализацию и степень.
-          </p>
-          <div className="rounded-2xl overflow-hidden border border-[#E5E7EB]">
-            <img src={`${IMG}/after-2-doctors.webp`} alt="Страница «Врачи» с фильтрами и поиском" className="w-full h-auto" />
-          </div>
-        </div>
-      </section>
-
       {/* Programs */}
-      <section className="pt-[37px] sm:pt-[45px] md:pt-[53px] pb-16 sm:pb-20 md:pb-24 bg-[#F7F8FA]">
+      <section className="pt-[37px] sm:pt-[45px] md:pt-[53px] pb-16 sm:pb-20 md:pb-24 bg-white">
         <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
           <SectionLabel>Комплексные программы</SectionLabel>
           <SectionHeading className="mb-8 sm:mb-10">
@@ -276,58 +275,6 @@ export default function CaseDetiKlinika() {
           </p>
           <div className="rounded-2xl overflow-hidden border border-[#E5E7EB] bg-white">
             <img src={`${IMG}/after-4-programs.webp`} alt="Каталог комплексных программ check-up" className="w-full h-auto" />
-          </div>
-        </div>
-      </section>
-
-      {/* Service page template */}
-      <section className="pt-[37px] sm:pt-[45px] md:pt-[53px] pb-16 sm:pb-20 md:pb-24 bg-white">
-        <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
-          <SectionLabel>Страница услуги</SectionLabel>
-          <SectionHeading className="mb-8 sm:mb-10">
-            Единый шаблон: цены, врачи, запись и ответы на частые вопросы
-          </SectionHeading>
-          <p className="text-sm sm:text-base text-[#6B7280] leading-relaxed max-w-2xl mb-8 sm:mb-10">
-            Для каждой услуги — например, приёма педиатра — собрали одинаковую структуру: актуальные
-            цены, слайдер врачей этого направления, блок онлайн-записи без звонков, а также
-            содержательный блок «когда нужно на приём» и график профилактических осмотров.
-          </p>
-          <div className="rounded-2xl overflow-hidden border border-[#E5E7EB] bg-white">
-            <img src={`${IMG}/after-5-service.webp`} alt="Страница услуги «Педиатр» с записью на приём" className="w-full h-auto" />
-          </div>
-        </div>
-      </section>
-
-      {/* Trust block */}
-      <section className="pt-[37px] sm:pt-[45px] md:pt-[53px] pb-16 sm:pb-20 md:pb-24 bg-[#F7F8FA]">
-        <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-            <div>
-              <SectionLabel>Доверие и обратная связь</SectionLabel>
-              <SectionHeading className="mb-5">Отзывы с четырёх площадок прямо на главной</SectionHeading>
-              <p className="text-[#6B7280] leading-relaxed text-sm sm:text-base">
-                Добавили на главную сводный блок отзывов с Яндекс Карт, Zoon, Продокторов и 2ГИС —
-                родитель видит реальные оценки клиники, не переходя на сторонние сайты. Рядом —
-                актуальные акции и новости клиники, которые обновляются регулярно.
-              </p>
-            </div>
-            <div className="space-y-3 sm:space-y-4">
-              {[
-                { icon: MessageSquare, title: "Рейтинги 4 площадок", desc: "Яндекс, Zoon, Продокторов, 2ГИС — с рейтингом и отзывами реальных пациентов." },
-                { icon: Filter, title: "Акции и скидки", desc: "Отдельный блок с действующими акциями: скидки для многодетных, сотрудников, вакцинация." },
-                { icon: MapPin, title: "Контакты и карта", desc: "Адрес, телефон и интерактивная карта проезда — в футере на каждой странице." },
-              ].map(({ icon: Icon, title, desc }) => (
-                <div key={title} className="flex gap-3 sm:gap-4 bg-white rounded-2xl p-4 sm:p-5 border border-[#E5E7EB]">
-                  <div className="flex-shrink-0 w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#E0F2F2] flex items-center justify-center">
-                    <Icon size={17} className="text-[#0EA5A4]" />
-                  </div>
-                  <div>
-                    <div className="font-bold text-[#1F2937] text-sm mb-0.5 sm:mb-1">{title}</div>
-                    <div className="text-xs sm:text-sm text-[#6B7280]">{desc}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
