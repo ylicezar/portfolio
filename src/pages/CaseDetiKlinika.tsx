@@ -172,35 +172,6 @@ export default function CaseDetiKlinika() {
         </div>
       </section>
 
-      {/* Hero visual: homepage + doctors + services */}
-      <section className="pb-16 sm:pb-20 md:pb-24 bg-[#F7F8FA]">
-        <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
-          <BeforeAfter
-            srcs={[`${IMG}/after-1-home.webp`, `${IMG}/after-2-doctors.webp`, `${IMG}/after-5-service.webp`]}
-            labels={["Главная страница", "Страница «Врачи»", "Страница «Услуги»"]}
-          />
-
-          <div className="mt-10 sm:mt-14">
-            <SectionLabel>Меню сайта</SectionLabel>
-            <SectionHeading className="mb-5 sm:mb-6">
-              Меню в две колонки вместо длинного списка ссылок
-            </SectionHeading>
-            <p className="text-sm sm:text-base text-[#6B7280] leading-relaxed max-w-2xl mb-8 sm:mb-10">
-              Выстроили меню по смыслу: диагностика, реабилитация и специалисты — с быстрыми
-              ссылками на вакцинацию, личного врача, услуги на дому и справки для спорта. Родитель
-              сразу видит всю структуру сайта, а не листает разделы вслепую.
-            </p>
-            <div className="rounded-2xl overflow-hidden border border-[#E5E7EB] bg-white shadow-sm">
-              <img
-                src={`${IMG}/after-3-menu.webp`}
-                alt="Меню сайта в две колонки"
-                className="w-full h-auto"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Challenge */}
       <section className="pt-[37px] sm:pt-[45px] md:pt-[53px] pb-16 sm:pb-20 md:pb-24 bg-white">
         <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
@@ -237,6 +208,52 @@ export default function CaseDetiKlinika() {
         </div>
       </section>
 
+      {/* Hero visual: homepage + doctors + services */}
+      <section className="pt-[18.5px] sm:pt-[22.5px] md:pt-[26.5px] pb-16 sm:pb-20 md:pb-24 bg-[#F7F8FA]">
+        <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
+          <BeforeAfter
+            srcs={[`${IMG}/after-1-home.webp`, `${IMG}/after-2-doctors.webp`, `${IMG}/after-5-service.webp`]}
+            labels={["Главная страница", "Страница «Врачи»", "Страница «Услуги»"]}
+          />
+
+          <div className="mt-10 sm:mt-14">
+            <SectionLabel>Меню сайта</SectionLabel>
+            <SectionHeading className="mb-5 sm:mb-6">
+              Меню в две колонки вместо длинного списка ссылок
+            </SectionHeading>
+            <p className="text-sm sm:text-base text-[#6B7280] leading-relaxed max-w-2xl mb-8 sm:mb-10">
+              Выстроили меню по смыслу: диагностика, реабилитация и специалисты — с быстрыми
+              ссылками на вакцинацию, личного врача, услуги на дому и справки для спорта. Родитель
+              сразу видит всю структуру сайта, а не листает разделы вслепую.
+            </p>
+            <div className="rounded-2xl overflow-hidden border border-[#E5E7EB] bg-white shadow-sm">
+              <img
+                src={`${IMG}/after-3-menu.webp`}
+                alt="Меню сайта в две колонки"
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Programs */}
+      <section className="pt-[37px] sm:pt-[45px] md:pt-[53px] pb-16 sm:pb-20 md:pb-24 bg-white">
+        <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
+          <SectionLabel>Комплексные программы</SectionLabel>
+          <SectionHeading className="mb-8 sm:mb-10">
+            Годовые программы и check-up с разбивкой по возрасту ребёнка
+          </SectionHeading>
+          <p className="text-sm sm:text-base text-[#6B7280] leading-relaxed max-w-2xl mb-8 sm:mb-10">
+            Собрали каталог программ с табами по возрасту (0–1 год, 1–3 года, 3 года, 0–17 лет),
+            понятным составом услуг и прозрачным сравнением цены до и после скидки.
+          </p>
+          <div className="rounded-2xl overflow-hidden border border-[#E5E7EB] bg-white">
+            <img src={`${IMG}/after-4-programs.webp`} alt="Каталог комплексных программ check-up" className="w-full h-auto" />
+          </div>
+        </div>
+      </section>
+
       {/* Actions */}
       <section className="pt-[18.5px] sm:pt-[22.5px] md:pt-[26.5px] pb-16 sm:pb-20 md:pb-24 bg-[#F7F8FA]">
         <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
@@ -258,23 +275,6 @@ export default function CaseDetiKlinika() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Programs */}
-      <section className="pt-[37px] sm:pt-[45px] md:pt-[53px] pb-16 sm:pb-20 md:pb-24 bg-white">
-        <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
-          <SectionLabel>Комплексные программы</SectionLabel>
-          <SectionHeading className="mb-8 sm:mb-10">
-            Годовые программы и check-up с разбивкой по возрасту ребёнка
-          </SectionHeading>
-          <p className="text-sm sm:text-base text-[#6B7280] leading-relaxed max-w-2xl mb-8 sm:mb-10">
-            Собрали каталог программ с табами по возрасту (0–1 год, 1–3 года, 3 года, 0–17 лет),
-            понятным составом услуг и прозрачным сравнением цены до и после скидки.
-          </p>
-          <div className="rounded-2xl overflow-hidden border border-[#E5E7EB] bg-white">
-            <img src={`${IMG}/after-4-programs.webp`} alt="Каталог комплексных программ check-up" className="w-full h-auto" />
           </div>
         </div>
       </section>
