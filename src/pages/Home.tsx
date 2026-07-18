@@ -28,7 +28,7 @@ const STATS = [
 const PROJECTS = [
   {
     id: 1,
-    image: "/portfolio/public/audiometr.webp",
+    image: "/portfolio/audiometr.webp",
     title: "Редизайн сайта audiometr.ru",
     role: "Digital Project Lead",
     tags: ["Редизайн", "UX", "B2B каталог"],
