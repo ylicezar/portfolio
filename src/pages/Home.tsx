@@ -10,11 +10,8 @@ import {
   Download,
   FileText,
   Layout,
-  Linkedin,
   Mail,
   MessageSquare,
-  Quote,
-  Send,
   Target,
 } from "lucide-react";
 
@@ -28,7 +25,7 @@ const STATS = [
 const PROJECTS = [
   {
     id: 1,
-    image: "/public/audiometr.webp",
+    image: "/audiometr.webp",
     title: "Редизайн сайта audiometr.ru",
     role: "Digital Project Lead",
     tags: ["Редизайн", "UX", "B2B каталог"],
@@ -39,7 +36,7 @@ const PROJECTS = [
   },
   {
     id: 2,
-    image: "/public/detyrzd.png",
+    image: "/detyrzd.png",
     title: "Создание сайта для Детской клиники РЖД-Медицина",
     role: "Digital Project Lead",
     tags: ["Создание сайта", "UI", "UX", "1C-Битрикс"],
@@ -50,7 +47,7 @@ const PROJECTS = [
   },
   {
     id: 3,
-    image: "/public/audio.webp",
+    image: "/audio.webp",
     title: "Создание сайта interacoustics.audio",
     role: "Digital Project Lead",
     tags: ["Стратегия", "Дизайн", "Tilda"],
@@ -273,7 +270,8 @@ function Hero() {
                 Смотреть кейсы <ArrowRight size={15} />
               </a>
               <a
-                href="#resume"
+                href="/resume.pdf"
+                download
                 className="inline-flex items-center gap-2 bg-white border border-[#E5E7EB] text-[#1F2937] font-semibold px-5 sm:px-6 py-3 rounded-xl hover:border-[#0EA5A4] hover:text-[#0EA5A4] transition-colors text-sm"
               >
                 Скачать резюме <Download size={15} />
@@ -477,7 +475,7 @@ function ProjectCard({ project }: { project: typeof PROJECTS[0] }) {
 
 function Projects() {
   return (
-    <section id="projects" className="py-16 sm:py-20 md:py-24 bg-[#F7F8FA]">
+    <section id="projects" className="py-16 sm:py-20 md:py-24 bg-white">
       <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 sm:gap-6 mb-10 sm:mb-14">
           <div>
@@ -504,7 +502,7 @@ function Experience() {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
-    <section id="experience" className="py-16 sm:py-20 md:py-24 bg-white">
+    <section id="experience" className="py-16 sm:py-20 md:py-24 bg-[#F7F8FA]">
       <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-3 gap-10 md:gap-14 lg:gap-16 items-start">
           <div>
@@ -607,7 +605,7 @@ function Tools() {
   const categories = [...new Set(TOOLS.map((t) => t.category))];
 
   return (
-    <section id="tools" className="py-16 sm:py-20 md:py-24 bg-[#F7F8FA]">
+    <section id="tools" className="py-16 sm:py-20 md:py-24 bg-white">
       <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
         <div className="text-center mb-10 sm:mb-14">
           <SectionLabel centered>Инструменты и технологии</SectionLabel>
@@ -648,7 +646,7 @@ function Tools() {
 
 function Process() {
   return (
-    <section className="py-16 sm:py-20 md:py-24 bg-white">
+    <section className="py-16 sm:py-20 md:py-24 bg-[#F7F8FA]">
       <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 sm:mb-16">
           <SectionLabel centered>Подход к работе</SectionLabel>
@@ -723,72 +721,19 @@ function Testimonials() {
 
 // ─── Resume Download ──────────────────────────────────────────────────────────
 
-function Resume() {
+function ResumeContact() {
   return (
-    <section id="resume" className="py-16 sm:py-20 md:py-24 bg-[#F7F8FA]">
+    <section id="contact" className="py-16 sm:py-20 md:py-24 bg-white relative">
+      <span id="resume" className="absolute -top-24" aria-hidden="true" />
       <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
-        <div className="bg-white rounded-2xl sm:rounded-3xl border border-[#E5E7EB] p-7 sm:p-10 md:p-14 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-10">
-          <div className="max-w-lg w-full md:w-auto">
-            <SectionLabel>Резюме</SectionLabel>
-            <SectionHeading className="mb-3 sm:mb-4">Скачать резюме</SectionHeading>
-            <p className="text-[#6B7280] text-sm sm:text-base leading-relaxed">
-              Моё резюме в формате PDF. <br />Полный обзор моего профессионального опыта и навыков.
-            </p>
-          </div>
-          <div className="flex flex-col items-center gap-4 sm:gap-5 flex-shrink-0">
-            <div className="w-36 sm:w-44 h-48 sm:h-60 bg-[#F7F8FA] rounded-xl sm:rounded-2xl border border-[#E5E7EB] flex flex-col p-4 sm:p-5 gap-2 shadow-sm">
-              <div className="w-10 h-10 rounded-full bg-[#E0F2F2] flex items-center justify-center mb-1">
-                <span className="text-sm font-black text-[#0EA5A4]">YP</span>
-              </div>
-              <div className="w-full h-2 rounded-full bg-[#E5E7EB]" />
-              <div className="w-2/3 h-1.5 rounded-full bg-[#E5E7EB]" />
-              <div className="mt-2 space-y-1.5">
-                <div className="w-full h-1.5 rounded-full bg-[#E5E7EB]" />
-                <div className="w-full h-1.5 rounded-full bg-[#E5E7EB]" />
-                <div className="w-3/4 h-1.5 rounded-full bg-[#E5E7EB]" />
-              </div>
-              <div className="mt-2 w-full h-px bg-[#0EA5A4]/25" />
-              <div className="space-y-1.5">
-                <div className="w-full h-1.5 rounded-full bg-[#E5E7EB]" />
-                <div className="w-full h-1.5 rounded-full bg-[#E5E7EB]" />
-                <div className="w-1/2 h-1.5 rounded-full bg-[#E5E7EB]" />
-              </div>
-              <div className="mt-auto text-center">
-                <span className="text-[10px] font-black text-[#0EA5A4] tracking-wide">CV 2026</span>
-              </div>
-            </div>
-            <button className="inline-flex items-center gap-2 bg-[#0EA5A4] text-white font-semibold px-6 sm:px-7 py-3 rounded-xl hover:bg-[#0d9190] transition-colors text-sm shadow-sm">
-              <Download size={15} /> Скачать (.PDF)
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ─── Contact ──────────────────────────────────────────────────────────────────
-
-function Contact() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [sent, setSent] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSent(true);
-  };
-
-  return (
-    <section id="contact" className="py-16 sm:py-20 md:py-24 bg-white">
-      <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
-        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-start">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
           <div>
-            <SectionLabel>Контакты</SectionLabel>
+            <SectionLabel>Резюме и контакты</SectionLabel>
             <SectionHeading className="mb-3 sm:mb-4">
               Давайте обсудим<br />ваш проект
             </SectionHeading>
             <p className="text-[#6B7280] text-sm sm:text-base leading-relaxed mb-8 sm:mb-10">
-              Если вам нужен менеджер web-проекта, руководитель цифрового направления или эксперт по контент-менеджменту – я открыта для новых возможностей и сотрудничества.
+              Если вам нужен менеджер web-проекта, руководитель цифрового направления или эксперт по контент-менеджменту – я открыта для новых возможностей и сотрудничества. Полный обзор опыта и навыков — в резюме PDF.
             </p>
             <div className="space-y-4 sm:space-y-5">
               <a href="mailto:79260655851@ya.ru" className="flex items-center gap-3 sm:gap-4 group">
@@ -813,74 +758,45 @@ function Contact() {
                   </div>
                 </div>
               </a>
-            
             </div>
           </div>
 
-          <div>
-            {sent ? (
-              <div className="bg-[#F0FDF4] border border-green-200 rounded-2xl p-8 sm:p-12 text-center">
-                <CheckCircle size={40} className="text-green-500 mx-auto mb-4" />
-                <h3 className="font-extrabold text-[#1F2937] text-lg sm:text-xl mb-2">Сообщение отправлено!</h3>
-                <p className="text-[#6B7280] text-sm leading-relaxed">
-                  Спасибо! Я свяжусь с вами в течение 1-2 рабочих дней.
-                </p>
-                <button
-                  onClick={() => { setSent(false); setForm({ name: "", email: "", message: "" }); }}
-                  className="mt-6 text-sm font-semibold text-[#0EA5A4] hover:underline"
-                >
-                  Отправить новое сообщение
-                </button>
+          <div className="bg-[#F7F8FA] rounded-2xl sm:rounded-3xl border border-[#E5E7EB] p-7 sm:p-10 flex flex-col items-center gap-5 sm:gap-6">
+            <div className="w-36 sm:w-44 h-48 sm:h-60 bg-white rounded-xl sm:rounded-2xl border border-[#E5E7EB] flex flex-col p-4 sm:p-5 gap-2 shadow-sm">
+              <div className="w-10 h-10 rounded-full bg-[#E0F2F2] flex items-center justify-center mb-1">
+                <span className="text-sm font-black text-[#0EA5A4]">YP</span>
               </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="bg-[#F7F8FA] rounded-2xl border border-[#E5E7EB] p-5 sm:p-8 space-y-4 sm:space-y-5">
-                <div>
-                  <label className="block text-sm font-bold text-[#1F2937] mb-1.5 sm:mb-2">Ваше имя</label>
-                  <input
-                    type="text"
-                    required
-                    value={form.name}
-                    onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    placeholder="Анна Иванова"
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-white border border-[#E5E7EB] rounded-xl text-sm text-[#1F2937] placeholder-[#9CA3AF] focus:outline-none focus:border-[#0EA5A4] focus:ring-2 focus:ring-[#0EA5A4]/10 transition-all"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-bold text-[#1F2937] mb-1.5 sm:mb-2">Email</label>
-                  <input
-                    type="email"
-                    required
-                    value={form.email}
-                    onChange={(e) => setForm({ ...form, email: e.target.value })}
-                    placeholder="anna@company.ru"
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-white border border-[#E5E7EB] rounded-xl text-sm text-[#1F2937] placeholder-[#9CA3AF] focus:outline-none focus:border-[#0EA5A4] focus:ring-2 focus:ring-[#0EA5A4]/10 transition-all"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-bold text-[#1F2937] mb-1.5 sm:mb-2">Сообщение</label>
-                  <textarea
-                    required
-                    rows={5}
-                    value={form.message}
-                    onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    placeholder="Расскажите мне о проекте или компании..."
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-white border border-[#E5E7EB] rounded-xl text-sm text-[#1F2937] placeholder-[#9CA3AF] focus:outline-none focus:border-[#0EA5A4] focus:ring-2 focus:ring-[#0EA5A4]/10 transition-all resize-none"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 bg-[#0EA5A4] text-white font-bold py-3 sm:py-3.5 rounded-xl hover:bg-[#0d9190] transition-colors text-sm"
-                >
-                  Отправить <Send size={15} />
-                </button>
-              </form>
-            )}
+              <div className="w-full h-2 rounded-full bg-[#E5E7EB]" />
+              <div className="w-2/3 h-1.5 rounded-full bg-[#E5E7EB]" />
+              <div className="mt-2 space-y-1.5">
+                <div className="w-full h-1.5 rounded-full bg-[#E5E7EB]" />
+                <div className="w-full h-1.5 rounded-full bg-[#E5E7EB]" />
+                <div className="w-3/4 h-1.5 rounded-full bg-[#E5E7EB]" />
+              </div>
+              <div className="mt-2 w-full h-px bg-[#0EA5A4]/25" />
+              <div className="space-y-1.5">
+                <div className="w-full h-1.5 rounded-full bg-[#E5E7EB]" />
+                <div className="w-full h-1.5 rounded-full bg-[#E5E7EB]" />
+                <div className="w-1/2 h-1.5 rounded-full bg-[#E5E7EB]" />
+              </div>
+              <div className="mt-auto text-center">
+                <span className="text-[10px] font-black text-[#0EA5A4] tracking-wide">CV 2026</span>
+              </div>
+            </div>
+            <a
+              href="/resume.pdf"
+              download
+              className="w-full inline-flex items-center justify-center gap-2 bg-[#0EA5A4] text-white font-semibold px-6 sm:px-7 py-3 rounded-xl hover:bg-[#0d9190] transition-colors text-sm shadow-sm"
+            >
+              <Download size={15} /> Скачать резюме (.PDF)
+            </a>
           </div>
         </div>
       </div>
     </section>
   );
 }
+
 function Home() {
   return (
     <>
@@ -893,8 +809,7 @@ function Home() {
       <Tools />
       <Process />
  {/*  <Testimonials /> */}
-      <Resume />
-      <Contact />
+      <ResumeContact />
     </>
   );
 }
