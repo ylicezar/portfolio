@@ -15,7 +15,7 @@ export const router = createBrowserRouter([
       { path: "/projects", element: <Projects /> },
       { path: "/projects/:id", element: <ProjectDetails /> },
       { path: "/cases/audiometr", element: <CaseAudiometr /> },
-      { path: "/cases/deti-klinika", element: <CaseDetiKlinika /> }
+      { path: "/cases/deti-klinika", element: <CaseDetiKlinika /> },
       { path: "/cases/interacoustics", element: <CaseInteracoustics /> },
     ],
   },
