@@ -60,7 +60,7 @@ const PROJECTS = [
 
 const EXPERIENCE = [
   {
-    period: "Сентябрь 2019 – сейчас",
+    period: "Сентябрь 2019 – ",
     title: "Руководитель отдела контента и веб-разработки",
     company: "Медафарм",
     isCurrent: true,

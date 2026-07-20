@@ -51,7 +51,7 @@ const GOALS = [
   {
     icon: Smartphone,
     title: "Нет адаптива",
-    desc: "Сайт не работал на мобильных устройствах и планшетах — а оттуда шла весомая доля трафика.",
+    desc: "Сайт не работал на мобильных устройствах и планшетах – а оттуда шла весомая доля трафика.",
   },
   {
     icon: Filter,
@@ -305,7 +305,7 @@ export default function CaseAudiometr() {
           <SectionLabel>Дорожная карта</SectionLabel>
           <SectionHeading className="mb-2">Как прошёл проект: 2 месяца, 4 спринта</SectionHeading>
           <p className="text-sm sm:text-base text-[#6B7280] leading-relaxed max-w-2xl mb-10 sm:mb-14">
-            Agile-план редизайна и миграции с Drupal 6 на Drupal 7 — от аудита до запуска и
+            Agile-план редизайна и миграции с Drupal 6 на Drupal 7 – от аудита до запуска и
             пострелизного мониторинга. Март – апрель 2021.
           </p>
 
@@ -393,11 +393,11 @@ export default function CaseAudiometr() {
         <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
           <SectionLabel>Каталог</SectionLabel>
           <SectionHeading className="mb-8 sm:mb-10">
-            От сплошного списка — к каталогу с фильтрами
+            От сплошного списка – к каталогу с фильтрами
           </SectionHeading>
           <p className="text-sm sm:text-base text-[#6B7280] leading-relaxed max-w-2xl mb-8 sm:mb-10">
             Более 50 моделей теперь можно отфильтровать по производителю и по функциональному
-            назначению — клиент находит нужный аудиометр за пару кликов, а не листает список сверху вниз.
+            назначению – клиент находит нужный аудиометр за пару кликов, а не листает список сверху вниз.
           </p>
           <div className="rounded-2xl overflow-hidden border border-[#E5E7EB]">
             <img src={`${IMG}/after-2-catalog.png`} alt="Каталог после редизайна" className="w-full h-auto" />
