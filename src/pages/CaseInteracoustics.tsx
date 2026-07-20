@@ -33,7 +33,7 @@ function SectionHeading({ children, className = "" }: { children: React.ReactNod
 
 const META = [
   { icon: Users, label: "Роль", value: "Руководитель проекта" },
-  { icon: Calendar, label: "Период", value: "2025 – сейчас" },
+  { icon: Calendar, label: "Период", value: "2026 – сейчас" },
   { icon: Target, label: "Сайт", value: "interacoustics.audio" },
 ];
 
