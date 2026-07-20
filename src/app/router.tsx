@@ -5,6 +5,7 @@ import Projects from "../pages/Projects";
 import ProjectDetails from "../pages/ProjectDetails";
 import CaseAudiometr from "../pages/CaseAudiometr";
 import CaseDetiKlinika from "../pages/CaseDetiKlinika";
+import CaseInteracoustics from "../pages/CaseInteracoustics";
 
 export const router = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ export const router = createBrowserRouter([
       { path: "/projects/:id", element: <ProjectDetails /> },
       { path: "/cases/audiometr", element: <CaseAudiometr /> },
       { path: "/cases/deti-klinika", element: <CaseDetiKlinika /> }
+      { path: "/cases/interacoustics", element: <CaseInteracoustics /> },
     ],
   },
 ]);

@@ -28,7 +28,7 @@ const STATS = [
 const PROJECTS = [
   {
     id: 1,
-    image: "/portfolio/audiometr.webp",
+    image: "/public/audiometr.webp",
     title: "Редизайн сайта audiometr.ru",
     role: "Digital Project Lead",
     tags: ["Редизайн", "UX", "B2B каталог"],
@@ -39,7 +39,7 @@ const PROJECTS = [
   },
   {
     id: 2,
-    image: "https://placehold.co/600x400",
+    image: "/public/detyrzd.png",
     title: "Создание сайта для Детской клиники РЖД-Медицина",
     role: "Digital Project Lead",
     tags: ["Создание сайта", "UI", "UX", "1C-Битрикс"],
@@ -50,7 +50,7 @@ const PROJECTS = [
   },
   {
     id: 3,
-    image: "https://placehold.co/600x400",
+    image: "/public/audio.webp",
     title: "Создание сайта interacoustics.audio",
     role: "Digital Project Lead",
     tags: ["Стратегия", "Дизайн", "Tilda"],
