@@ -77,7 +77,7 @@ const TAGS = ["Каталог оборудования", "B2B", "MVP за 7 дн
 
 const META = [
   { icon: Users, label: "Роль", value: "Руководитель проекта" },
-  { icon: Calendar, label: "Период", value: "2025 – сейчас" },
+  { icon: Calendar, label: "Период", value: "2025 - сейчас" },
 ];
 
 const GOALS = [
@@ -185,7 +185,7 @@ export default function CaseMedRx() {
                 меню оборудования и переведённым контентом.
               </p>
             </div>
-            <ShotCard src={`${IMG}/after-3-responsive.webp`} alt="Адаптивная вёрстка сайта MedRX на разных устройствах" />
+            <img src="/cases/medrx/after-3-responsive.webp" alt="Адаптивная вёрстка сайта MedRX на разных устройствах" className="w-full h-auto block rounded-[28px]" />
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -405,7 +405,7 @@ export default function CaseMedRx() {
             <ArrowLeft size={15} /> Все кейсы
           </Link>
           <a
-            href="#contact"
+            href="mailto:79260655851@ya.ru"
             className="inline-flex items-center gap-2 font-semibold px-6 py-3 rounded-full transition-colors text-sm text-white"
             style={{ background: RED }}
           >
