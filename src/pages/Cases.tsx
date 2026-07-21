@@ -109,7 +109,7 @@ export default function Cases() {
         <SectionLabel>Портфолио</SectionLabel>
         <SectionHeading>Кейсы</SectionHeading>
         <p className="text-[#6B7280] leading-relaxed max-w-2xl mb-10 sm:mb-14">
-          Подборка проектов в сфере здравоохранения и медицинского оборудования <br>от редизайна
+          Подборка проектов в сфере здравоохранения и медицинского оборудования <br />от редизайна
           существующих сайтов до создания новых с нуля.
         </p>
 
