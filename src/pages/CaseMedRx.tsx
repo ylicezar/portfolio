@@ -347,7 +347,7 @@ export default function CaseMedRx() {
               <div
                 key={step}
                 className="flex gap-4 sm:gap-5 items-start rounded-2xl p-4 sm:p-5"
-                style={{ background: "#F5F5F7", border: `1px solid ${HAIRLINE}` }}
+                style={{ background: "#F5F5F7",/* border: `1px solid ${HAIRLINE}` */}}
               >
                 <div
                   className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold"
