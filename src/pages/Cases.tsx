@@ -13,6 +13,16 @@ const CASES = [
     link: "/cases/audiometr",
   },
   {
+    id: "medrx-med",
+    image: "/medrx-med.webp",
+    title: "Создание сайта medrx-med.ru",
+    period: "2025 – сейчас",
+    tags: ["MVP за 7 дней", "Tilda"],
+    summary:
+      "Собрали на Tilda MVP-сайт-каталог для американского производителя MedRx. Быстрый запуск под B2B-продажи медицинского аудиологического оборудования.",
+    link: "/cases/medrx-med",
+  },
+  {
     id: "deti-klinika",
     image: "/detyrzd.png",
     title: "Сайт детской клиники «РЖД-Медицина»",
