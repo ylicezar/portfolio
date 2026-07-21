@@ -12,16 +12,7 @@ const CASES = [
       "Обновили фирменный стиль, собрали каталог из 50+ моделей с фильтрами и сделали сайт полностью адаптивным.",
     link: "/cases/audiometr",
   },
-  {
-    id: "medrx-med",
-    image: "/medrx-med.webp",
-    title: "Создание сайта medrx-med.ru",
-    period: "2025 – сейчас",
-    tags: ["MVP за 7 дней", "Tilda"],
-    summary:
-      "Собрали на Tilda сайт-каталог для американского производителя MedRx. Быстрый запуск под B2B-продажи медицинского аудиологического оборудования.",
-    link: "/cases/medrx",
-  },
+
   {
     id: "deti-klinika",
     image: "/detyrzd.png",
@@ -31,6 +22,16 @@ const CASES = [
     summary:
       "Создали с нуля сайт с каталогом врачей, услуг и комплексных программ, онлайн-записью и адаптивной вёрсткой.",
     link: "/cases/deti-klinika",
+  },
+    {
+    id: "medrx-med",
+    image: "/medrx-med.webp",
+    title: "Создание сайта medrx-med.ru",
+    period: "2025 – сейчас",
+    tags: ["MVP за 7 дней", "Tilda"],
+    summary:
+      "Собрали на Tilda сайт-каталог для американского производителя MedRx. Быстрый запуск под B2B-продажи медицинского аудиологического оборудования.",
+    link: "/cases/medrx",
   },
   {
     id: "interacoustics",
