@@ -454,7 +454,7 @@ export default function CaseAudiometr() {
             <ArrowLeft size={15} /> Все кейсы
           </Link>
           <a
-            href="#contact"
+            href="mailto:79260655851@ya.ru"
             className="inline-flex items-center gap-2 bg-[#0EA5A4] text-white font-semibold px-6 py-3 rounded-xl hover:bg-[#0d9190] transition-colors text-sm"
           >
             Обсудить похожий проект <ArrowRight size={15} />

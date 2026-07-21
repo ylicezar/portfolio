@@ -110,6 +110,7 @@ const EXPERIENCE = [
       "Подбирала, обрабатывала и ретушировала изображения для карточек товаров, статей и новостей.",
       "Выполняла небольшие правки в базе данных MySQL и помогала решать технические задачи, связанные с поддержкой сайтов.",
     ],
+    Достижения: [],
     skills: ["HTML", "CSS", "CMS", "FTP"],
   },
 ];
@@ -557,9 +558,9 @@ function Experience() {
                       {openIdx === idx && (
                         <div className="px-4 sm:px-5 pb-4 sm:pb-5 border-t border-[#F3F4F6] pt-4 space-y-4">
                           <div>
-                            <div className="text-xs font-semibold uppercase tracking-wider text-[#6B7280] mb-2">Responsibilities</div>
+                            <div className="text-xs font-semibold uppercase tracking-wider text-[#6B7280] mb-2">Обязанности</div>
                             <ul className="space-y-1.5">
-                              {exp.Обязанности.map((r, i) => (
+                              {(exp.Обязанности || []).map((r, i) => (
                                 <li key={i} className="flex items-start gap-2 text-sm text-[#6B7280]">
                                   <span className="mt-[7px] w-1 h-1 rounded-full bg-[#9CA3AF] flex-shrink-0" />
                                   {r}
@@ -568,9 +569,9 @@ function Experience() {
                             </ul>
                           </div>
                           <div>
-                            <div className="text-xs font-semibold uppercase tracking-wider text-[#0EA5A4] mb-2">Key Achievements</div>
+                            <div className="text-xs font-semibold uppercase tracking-wider text-[#0EA5A4] mb-2">Ключевые достижения</div>
                             <ul className="space-y-1.5">
-                              {exp.Достижения.map((a, i) => (
+                              {(exp.Достижения || []).map((a, i) => (
                                 <li key={i} className="flex items-start gap-2 text-sm text-[#1F2937] font-medium">
                                   <CheckCircle size={13} className="text-[#0EA5A4] mt-0.5 flex-shrink-0" />
                                   {a}

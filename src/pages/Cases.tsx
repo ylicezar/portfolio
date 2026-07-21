@@ -115,7 +115,7 @@ export default function Cases() {
           </div>
           <div className="text-sm text-[#6B7280]">
             Ищете подрядчика для похожей задачи?{" "}
-            <a href="/#contact" className="font-semibold text-[#0EA5A4] hover:text-[#0d9190]">
+            <a href="mailto:79260655851@ya.ru" className="font-semibold text-[#0EA5A4] hover:text-[#0d9190]">
               Напишите мне
             </a>
           </div>
