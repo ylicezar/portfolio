@@ -22,7 +22,7 @@ const IMG = "/cases/medrx";
 const APPLE_FONT =
   '-apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif';
 
-const RED = "#FF3B30"; // Apple system red — also MedRX's brand red
+const RED = "#FF3B30"; // Apple system red – also MedRX's brand red
 const INK = "#1D1D1F"; // Apple near-black text
 const SUB = "#6E6E73"; // Apple secondary gray text
 const HAIRLINE = "rgba(0,0,0,0.08)";
@@ -89,12 +89,12 @@ const GOALS = [
   {
     icon: Palette,
     title: "Фирменный стиль партнёра",
-    desc: "Американский бренд с чёткими red/black гайдлайнами — стиль требовалось перенести на сайт без искажений и компромиссов.",
+    desc: "Американский бренд с чёткими red/black гайдлайнами – стиль требовалось перенести на сайт без искажений и компромиссов.",
   },
   {
     icon: Globe,
     title: "Контент только на английском",
-    desc: "Все материалы по оборудованию существовали лишь на английском — предстояло перевести и адаптировать их под российский рынок.",
+    desc: "Все материалы по оборудованию существовали лишь на английском – предстояло перевести и адаптировать их под российский рынок.",
   },
 ];
 
@@ -103,7 +103,7 @@ const ACTIONS = [
     step: "1",
     icon: ListTree,
     title: "Сбор данных по оборудованию",
-    desc: "Собрали полный список моделей бренда — аудиометры, тимпанометры, REM/LSM системы, аксессуары — и сверили номенклатуру.",
+    desc: "Собрали полный список моделей бренда – аудиометры, тимпанометры, REM/LSM системы, аксессуары – и сверили номенклатуру.",
   },
   {
     step: "2",
@@ -115,7 +115,7 @@ const ACTIONS = [
     step: "3",
     icon: Sparkles,
     title: "Запуск MVP на Tilda",
-    desc: "Собрали и опубликовали рабочую версию сайта за считаные дни — в фирменном red/black стиле бренда, без задержек на разработку.",
+    desc: "Собрали и опубликовали рабочую версию сайта за считаные дни – в фирменном red/black стиле бренда, без задержек на разработку.",
   },
   {
     step: "4",
@@ -127,13 +127,13 @@ const ACTIONS = [
     step: "5",
     icon: Package,
     title: "Расходники и аксессуары",
-    desc: "Дополнили каталог разделом расходных материалов — чехлы, кабели, гарнитуры и колонки — с фильтрами по типу и совместимости.",
+    desc: "Дополнили каталог разделом расходных материалов – чехлы, кабели, гарнитуры и колонки – с фильтрами по типу и совместимости.",
   },
 ];
 
 const RESULTS = [
   { value: "7 дней", label: "от брифа до запуска рабочего MVP" },
-  { value: "99", label: "позиций в каталоге — приборы, аксессуары, расходники" },
+  { value: "99", label: "позиций в каталоге – приборы, аксессуары, расходники" },
   { value: "12", label: "аудиометров вынесены в наглядное визуальное меню" },
 ];
 
@@ -180,7 +180,7 @@ export default function CaseMedRx() {
                 Сайт-каталог MedRX: запуск нового поставщика за одну неделю
               </h1>
               <p className="text-lg leading-relaxed" style={{ color: SUB }}>
-                Каталог оборудования для диагностики слуха американского бренда MedRX — сайт
+                Каталог оборудования для диагностики слуха американского бренда MedRX – сайт
                 на Tilda, собранный с нуля в фирменном red/black стиле партнёра, с наглядным
                 меню оборудования и переведённым контентом.
               </p>
@@ -274,15 +274,15 @@ export default function CaseMedRx() {
           <Eyebrow>Каталог</Eyebrow>
           <Heading className="mb-4">MVP, который сразу выглядел завершённым продуктом</Heading>
           <p className="text-sm sm:text-base leading-relaxed max-w-2xl mb-8 sm:mb-10" style={{ color: SUB }}>
-            Главная страница объединила все категории оборудования — аудиометры, тимпанометры,
-            детскую аудиометрию, HIT+ и REM/LSM — в понятную структуру с крупными карточками
+            Главная страница объединила все категории оборудования – аудиометры, тимпанометры,
+            детскую аудиометрию, HIT+ и REM/LSM – в понятную структуру с крупными карточками
             товаров и прямыми переходами в каталог.
           </p>
           <ShotCard src={`${IMG}/after-1-home.webp`} alt="Главная страница сайта MedRX" />
         </div>
       </section>
 
-      {/* Mega menu spotlight — dark section */}
+      {/* Mega menu spotlight – dark section */}
       <section className="pt-16 sm:pt-20 md:pt-24 pb-16 sm:pb-20 md:pb-24" style={{ background: "#0A0A0A" }}>
         <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-14 max-w-2xl mx-auto">
@@ -296,7 +296,7 @@ export default function CaseMedRx() {
               Меню, по которому видно оборудование, а не только текст
             </Heading>
             <p className="text-sm sm:text-base leading-relaxed" style={{ color: "rgba(255,255,255,0.65)" }}>
-              Для каждой категории — аудиометры, тимпанометры, REM/LSM — собрали визуальное
+              Для каждой категории – аудиометры, тимпанометры, REM/LSM – собрали визуальное
               меню: фото прибора, короткое описание и переход в карточку в один клик. Из 12
               аудиометров бренда самые ходовые вынесли в быстрый доступ прямо в шапке сайта.
             </p>
@@ -314,10 +314,10 @@ export default function CaseMedRx() {
       <section className="pt-16 sm:pt-20 md:pt-24 pb-16 sm:pb-20 md:pb-24 bg-white">
         <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
           <Eyebrow>Расходные материалы</Eyebrow>
-          <Heading className="mb-4">От приборов — к аксессуарам и расходникам</Heading>
+          <Heading className="mb-4">От приборов – к аксессуарам и расходникам</Heading>
           <p className="text-sm sm:text-base leading-relaxed max-w-2xl mb-8 sm:mb-10" style={{ color: SUB }}>
             После запуска MVP каталог дополнили разделом расходных материалов с фильтрами по
-            принадлежности к прибору и по типу — гарнитуры, кабели, колонки, чехлы.
+            принадлежности к прибору и по типу – гарнитуры, кабели, колонки, чехлы.
           </p>
           <ShotCard src={`${IMG}/after-2-catalog-filter.webp`} alt="Каталог расходных материалов с фильтрами на сайте MedRX" />
         </div>
@@ -330,7 +330,7 @@ export default function CaseMedRx() {
           <Heading className="mb-4">Понятная структура для каждой позиции каталога</Heading>
           <p className="text-sm sm:text-base leading-relaxed max-w-2xl mb-8 sm:mb-10" style={{ color: SUB }}>
             Единый шаблон карточки: галерея, характеристики, описание, видеоинструкции и
-            сопутствующие материалы — на примере аудиометра AVANT ARC.
+            сопутствующие материалы – на примере аудиометра AVANT ARC.
           </p>
           <ShotCard src={`${IMG}/after-4-product.webp`} alt="Карточка товара AVANT ARC на сайте MedRX" />
         </div>
@@ -368,7 +368,7 @@ export default function CaseMedRx() {
         </div>
       </section>
 
-      {/* Results — dark spec section */}
+      {/* Results – dark spec section */}
       <section className="pt-16 sm:pt-20 md:pt-24 pb-16 sm:pb-20 md:pb-24" style={{ background: "#0A0A0A" }}>
         <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-14">
@@ -376,7 +376,7 @@ export default function CaseMedRx() {
               Результат
             </div>
             <h2 className="text-3xl md:text-[2.5rem] font-semibold tracking-tight text-white">
-              Каталог, запущенный за неделю — и растущий дальше
+              Каталог, запущенный за неделю – и растущий дальше
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
