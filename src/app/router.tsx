@@ -6,6 +6,7 @@ import ProjectDetails from "../pages/ProjectDetails";
 import CaseAudiometr from "../pages/CaseAudiometr";
 import CaseDetiKlinika from "../pages/CaseDetiKlinika";
 import CaseInteracoustics from "../pages/CaseInteracoustics";
+import CaseMedRx from "../pages/CaseMedRx";
 import Cases from "../pages/Cases";
 
 export const router = createBrowserRouter([
@@ -18,6 +19,7 @@ export const router = createBrowserRouter([
       { path: "/cases/audiometr", element: <CaseAudiometr /> },
       { path: "/cases/deti-klinika", element: <CaseDetiKlinika /> },
       { path: "/cases/interacoustics", element: <CaseInteracoustics /> },
+{ path: "/cases/medrx", element: <CaseMedRx /> },
       { path: "/cases", element: <Cases />,
 },
     ],
